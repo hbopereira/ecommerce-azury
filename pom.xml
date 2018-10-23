@@ -38,7 +38,6 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>9.3.1208</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
