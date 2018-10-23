@@ -1,0 +1,210 @@
+<style>
+.block-header span {
+	color: #605c09;
+}
+
+.block-header {
+	border-bottom-color: #605c09;
+}
+
+/* TOPO */
+#topbar {
+	background-color: #ffffff;
+}
+
+#topbar .list-inline {
+	border-top: none;
+}
+
+#topbar .list-inline {
+	border-bottom: none;
+}
+
+#topbar {
+	border-bottom: 1px solid #e4e4e4;
+}
+
+#topbar .list-inline li a {
+	color: #000000;
+}
+
+#topbar .list-inline li a:hover {
+	color: #666666;
+}
+
+#topbar .list-inline i.glyphicon-shopping-cart {
+	background: #000000;
+	color: #ffffff;
+}
+
+#topbar ul.list-inline, #h-social .inner-content, #blog .inner-content,
+	#store-content .inner-content, footer .block {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#menu {
+	background-color: #ffffff;
+}
+
+#menu .navbar {
+	border-top: none;
+}
+
+#menu {
+	border-top: 1px solid #e4e4e4;
+}
+
+#menu .navbar {
+	border-bottom: none;
+}
+
+#menu {
+	border-bottom: 2px solid #c4bc00;
+}
+
+#menu .navbar-nav>li:hover {
+	border-left: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
+}
+
+#menu .navbar-nav .dropdown-menu, #menu .navbar-nav .dropdown-submenu {
+	background: #000000;
+}
+
+#menu .navbar-nav .dropdown-menu a {
+	color: #eeeeee;
+}
+
+#menu .navbar-nav .dropdown-menu a .sub-caret {
+	border-left-color: #eeeeee !important;
+}
+
+#menu .navbar-nav .dropdown-menu a:hover {
+	color: #ffffff;
+}
+
+#menu .navbar-nav>li a .caret {
+	border-top-color: #000000;;
+	border-bottom-color: #000000;;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #000000;
+}
+
+#menu .navbar-nav>li a:hover .caret {
+	border-top-color: #666666;;
+	border-bottom-color: #666666;;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>.open>a,
+	.navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus
+	{
+	color: #666666;
+}
+
+.user {
+	font-weight: bold;
+}
+
+.logout {
+	cursor: pointer;
+	margin-left: 5px;
+}
+</style>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- <nav class="navbar fixed-top navbar navbar-default"
+	style="background-color: transparent">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#"> <img alt="TI.Fire">
+			</a>
+			<form class="navbar-form navbar-left" role="search">
+				<div class="form-group">
+					<input type="text" ng-model="pesquisar" class="form-control"
+						placeholder="Pesquisar">
+				</div>
+				<button type="submit" class="btn btn-primary">Pesquisar</button>
+			</form>
+		</div>
+		<div class="pull-right">
+			<ul>
+				<li><a ui-sref="login"> <i
+						class="glyphicon glyphicon-log-in"></i> Entrar
+				</a></li>
+			</ul>
+		</div>
+	</div>
+</nav> -->
+<div>
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header"></div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<!--<li ng-show="user.username"><a ui-sref="users">Users</a></li> -->
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+
+					<li><a>Whatsapp <i class="glyphicon glyphicon-earphone"></i>
+							(44) 99930-1220
+					</a></li>
+
+					<li><a> <i class="glyphicon glyphicon-user"></i> Minha
+							conta
+					</a></li>
+
+					<li ng-show="user.username"><a> <span class="user">Olá,
+								{{user.name}}</span> <span ng-click="logout()" href="" class="logout">Sair</span>
+					</a></li>
+
+					<li ng-show="!user.username"><a ui-sref="login"> <i
+							class="glyphicon glyphicon-log-in"></i> Entrar
+					</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+</div>
+
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-4">
+			<h1 class="logo-base">
+				<a ui-sref="begin"> <img class="logo"
+					src="https://assets.xtechcommerce.com/uploads/logos/60af2ac3fb0e78f3e37c4c872f11fc42.png"
+					alt="Azury">
+				</a>
+			</h1>
+		</div>
+		<div id="menu" class="col-xs-8 adjust">
+			<nav class=" navbar fixed-top navbar navbar-default"
+				style="background-color: transparent" heigth="50">
+				<ul class="nav navbar-nav">
+					<!--  <li ng-repeat="secao in secaoPorProduto"><a>
+							<h4>{{secao.secmer}}</h4>
+					</a></li> -->
+					<li><a ui-sref="secmer-vestido">
+							<h4>Vestido</h4>
+					</a></li>
+					<li><a ui-sref="secmer-camisete">
+							<h4>Camisete</h4>
+					</a></li>
+					<li><a ui-sref="secmer-cigana">
+							<h4>Cigana</h4>
+					</a></li>
+					<li><a ui-sref="home">
+							<h4>Destaque</h4>
+					</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
