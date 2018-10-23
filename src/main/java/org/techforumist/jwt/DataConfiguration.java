@@ -10,13 +10,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DataConfiguration {
 	
-	 @Bean
+	/* @Bean
 	    public BasicDataSource dataSource() throws URISyntaxException {
 	        URI dbUri = new URI(System.getenv("DATABASE_URL"));
 
 	        String username = dbUri.getUserInfo().split(":")[0];
 	        String password = dbUri.getUserInfo().split(":")[1];
-	        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
+	        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath() + "?sslmode=false";
 
 	        BasicDataSource basicDataSource = new BasicDataSource();
 	        basicDataSource.setUrl(dbUrl);
@@ -24,6 +24,6 @@ public class DataConfiguration {
 	        basicDataSource.setPassword(password);
 
 	        return basicDataSource;
-	    }
+	    }*/
 
 }
