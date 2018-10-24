@@ -31,7 +31,7 @@ public class Mercador  {
 	@Column(length=13)
 	private String codbar;
 	
-	@OneToMany(cascade=CascadeType.ALL, mappedBy="itetabpr")
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="mercador")
 	private List<Itetabpr> itens = new ArrayList<Itetabpr>();
 	
 /*	@Column(length=4)
