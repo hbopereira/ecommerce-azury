@@ -18,12 +18,12 @@ public class ItetabprController {
 	@Autowired
 	private ItetabprRepository itensRepo;
 
-	//@RequestMapping(method = RequestMethod.GET)
-	//public List<Itetabpr> listarTodos() {
-	//   	return new ArrayList<Itetabpr>(itensRepo.ListarPorTabelaDePreco());
-	//}
-
 	@RequestMapping(method = RequestMethod.GET)
+	public List<Itetabpr> listarTodos() {
+	   	return new ArrayList<Itetabpr>(itensRepo.findAll());
+	}
+
+	/*@RequestMapping(method = RequestMethod.GET)
 	public List<Itetabpr> ListarPorSecaoVestido() {
        return new ArrayList<Itetabpr>(itensRepo.ListarPorTabelaDePrecoeSecaoVestido());
 	}

@@ -51,6 +51,15 @@ angular.module('JWTDemoApp').config(function($stateProvider, $urlRouterProvider)
 				controller : 'BeginController'
 			}
 		}
+	}).state('itetabpr', {
+		parent : 'nav',
+		url : '/por-tabela',
+		views : {
+			'content@' : {
+				templateUrl : 'app/views/secmer/secmerVestido.html',
+				controller : 'SecmerController'
+			}
+		}
 	}).state('secmer-vestido', {
 		parent : 'nav',
 		url : '/secao-vestido',
