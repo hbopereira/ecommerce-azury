@@ -20,7 +20,7 @@ public class ItetabprController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public List<Itetabpr> listarTodos() {
-	   	return new ArrayList<Itetabpr>(itensRepo.findAll());
+	   	return new ArrayList<Itetabpr>(itensRepo.ListarPorTabelaDePreco());
 	}
 
 	/*@RequestMapping(method = RequestMethod.GET)
