@@ -192,17 +192,8 @@
 			<div id="menu" class="col-xs-8 adjust">
 				<nav class="navbar navbar-default" role="navigation">
 					<ul class="nav navbar-nav">
-						<li><a ui-sref="secmer-vestido">
-								<h4>Vestido</h4>
-						</a></li>
-						<li><a ui-sref="secmer-cigana">
-								<h4>Cigana</h4>
-						</a></li>
-						<li><a ui-sref="secmer-camisete">
-								<h4>Camisete</h4>
-						</a></li>
-						<li><a ui-sref="home">
-								<h4>Destaque</h4>
+						<li><a ng-repeat="secmer in secaoPorProduto">
+								<h4>{{secmer.secmer}}</h4>
 						</a></li>
 					</ul>
 				</nav>
