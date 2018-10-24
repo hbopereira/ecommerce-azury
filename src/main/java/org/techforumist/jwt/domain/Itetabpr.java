@@ -58,13 +58,13 @@ public class Itetabpr implements Serializable {
 	// return this.codtabpre;
 	// }
 
-	public void setCodmer(Integer codmer) {
-		this.codmer = codmer;
-	}
+	//public void setCodmer(Integer codmer) {
+//		this.codmer = codmer;
+	//}
 
-	public Integer getCodmer() {
-		return this.codmer;
-	}
+	//public Integer getCodmer() {
+	//	return this.codmer;
+	//}
 
 	public void setValven(Double valven) {
 		this.valven = valven;
@@ -89,5 +89,14 @@ public class Itetabpr implements Serializable {
 	public Double getValpro() {
 		return this.valpro;
 	}
+
+	public Integer getCodtabpre() {
+		return codtabpre;
+	}
+
+	public void setCodtabpre(Integer codtabpre) {
+		this.codtabpre = codtabpre;
+	}
+	
 
 }
