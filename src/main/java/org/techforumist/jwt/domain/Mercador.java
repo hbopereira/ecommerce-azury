@@ -29,10 +29,10 @@ public class Mercador  {
 	@Column(name="cod")
 	private Integer cod;
 	
-	@OneToOne(targetEntity = Secmer.class, fetch = FetchType.EAGER)
-	@Cascade(CascadeType.ALL)
-	@JoinColumn(name = "codsecmer")
-	private Secmer secmer;
+	//@OneToOne(targetEntity = Secmer.class, fetch = FetchType.EAGER)
+	//@Cascade(CascadeType.ALL)
+	//@JoinColumn(name = "codsecmer")
+	//private Secmer secmer;
 
 	@Column(length=13)
 	private String codbar;
@@ -465,13 +465,13 @@ public class Mercador  {
 		this.palcha = palcha;
 	}
 
-	public Secmer getSecmer() {
-		return secmer;
-	}
+	//public Secmer getSecmer() {
+	//	return secmer;
+	//}
 
-	public void setSecmer(Secmer secmer) {
-		this.secmer = secmer;
-	}
+	//public void setSecmer(Secmer secmer) {
+	//	this.secmer = secmer;
+	//}
 	
 	
 
