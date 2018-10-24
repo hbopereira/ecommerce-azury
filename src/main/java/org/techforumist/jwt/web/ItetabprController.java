@@ -18,18 +18,18 @@ public class ItetabprController {
 	@Autowired
 	private ItetabprRepository itensRepo;
 
-	@RequestMapping(method = RequestMethod.GET)
-	public List<Itetabpr> listarTodos() {
-	   	return new ArrayList<Itetabpr>(itensRepo.ListarPorTabelaDePreco());
-	}
+	//@RequestMapping(method = RequestMethod.GET)
+	//public List<Itetabpr> listarTodos() {
+	//   	return new ArrayList<Itetabpr>(itensRepo.ListarPorTabelaDePreco());
+	//}
 
-	@RequestMapping(method = RequestMethod.GET, value={"/porVestido"})
+	@RequestMapping(method = RequestMethod.GET)
 	public List<Itetabpr> ListarPorSecaoVestido() {
        return new ArrayList<Itetabpr>(itensRepo.ListarPorTabelaDePrecoeSecaoVestido());
 	}
 	
 
-	@RequestMapping(method = RequestMethod.GET, value={"/porCamisete"})
+	/*@RequestMapping(method = RequestMethod.GET, value={"/porCamisete"})
 	public List<Itetabpr> ListarPorSecaoCamisete() {
        return new ArrayList<Itetabpr>(itensRepo.ListarPorTabelaDePrecoeSecaoCamisete());
 	}
@@ -38,6 +38,6 @@ public class ItetabprController {
 	@RequestMapping(method = RequestMethod.GET, value={"/porCigana"})
 	public List<Itetabpr> ListarPorSecaoCigana() {
        return new ArrayList<Itetabpr>(itensRepo.ListarPorTabelaDePrecoeSecaoCigana());
-	}
+	}*/
 
 }

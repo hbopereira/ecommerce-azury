@@ -6,7 +6,7 @@ angular.module('JWTDemoApp')
 	
 	
 	var listarProdutosPorTabelaPrecoSecaoVestido = function() {
-		$http.get('itens/porVestido').success(function(res) {
+		$http.get('itens').success(function(res) {
 			$scope.mercadoresPorTabelaPrecoSecaoVestido = res;
 			$scope.message = '';
 		}).error(function(error) {
@@ -14,7 +14,7 @@ angular.module('JWTDemoApp')
 		});
 	};
 	
-	var listarProdutosPorTabelaPrecoSecaoCigana = function() {
+	/*var listarProdutosPorTabelaPrecoSecaoCigana = function() {
 		$http.get('itens/porCigana').success(function(res) {
 			$scope.mercadoresPorTabelaPrecoSecaoCigana = res;
 			$scope.message = '';
@@ -30,7 +30,7 @@ angular.module('JWTDemoApp')
 		}).error(function(error) {
 			$scope.message = error.message;
 		});
-	};
+	};*/
 	
 	
 	
