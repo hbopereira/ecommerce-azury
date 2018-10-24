@@ -38,7 +38,7 @@ public class Itetabpr implements Serializable {
 	private Double valpro;
 
 	@ManyToOne
-	@JoinColumn(name = "codmer")
+//	@JoinColumn(name = "codmer")
 	private Mercador mercador;
    
 	
