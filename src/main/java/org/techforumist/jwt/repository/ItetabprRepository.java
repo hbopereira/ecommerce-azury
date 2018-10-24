@@ -10,7 +10,7 @@ import org.techforumist.jwt.domain.Itetabpr;
 @Repository
 public interface ItetabprRepository extends JpaRepository<Itetabpr, Integer>{
 	
-	@Query(value = "select * from mercador ", nativeQuery = true)
+	@Query(value = "select cod codmer, valven, porcom, valpro from mercador", nativeQuery = true)
 	public List<Itetabpr> ListarPorTabelaDePreco();
 
 	
