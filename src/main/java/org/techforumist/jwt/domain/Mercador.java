@@ -29,8 +29,8 @@ public class Mercador  {
 	@Column(length=13)
 	private String codbar;
 	
-	//@OneToMany
-	//private List<Itetabpr> itens = new ArrayList<Itetabpr>();
+	@OneToMany
+	private List<Itetabpr> itens = new ArrayList<Itetabpr>();
 	
 /*	@Column(length=4)
 	private String codtam;
