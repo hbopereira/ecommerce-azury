@@ -14,8 +14,9 @@ public interface MercadorRepository extends JpaRepository<Mercador, Integer>{
 	
 //	@Query(value = "select * from mercador " + "left join itetabpr on itetabpr.codmer = mercador.cod "
 //			+ "where vissit=1 " + "and itetabpr.codtabpre=1" + "order by mercador.des desc ", nativeQuery = true)
-	@Query(value = "select codbar, mer from mercador "
-       + "where mercador.vissit=1 order by mercador.des desc ")
+	@Query(value = "select cod,codbar,codpad,codtam,gra,mer,desfor,codean,codsecmer,codsubsecmer,codmar,uni,vol,pesliq,pesbru,valcus,valven,marluc,estmin,codfis,porcom,aliicm,utides,ativo,filtro,dataltvalcus,coddetmer,unicom,fatconuni,naoimptab,naoimpeti,locdep,indkan,valcuscal,pordesmax,datultcot,codplacon,proexp,codser,codanp,valbascalstret,valicmstret,commin,quaref,ncm,codclafis,codorimer,codtriicm,codsitopesimnac,poripi,codespsubtri,estatu,estest,des,fotcap,obs,palcha,rating,vissit,blo" + 
+			" from mercador "
+       + "where mercador.vissit=1 order by mercador.des desc ", nativeQuery = true)
 	public List<Mercador> listarPorDestaque();
 	
 
