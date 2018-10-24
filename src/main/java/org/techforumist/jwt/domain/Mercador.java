@@ -4,11 +4,13 @@ package org.techforumist.jwt.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -29,7 +31,7 @@ public class Mercador  {
 	@Column(length=13)
 	private String codbar;
 	
-	@OneToMany
+	@OneToMany(mappedBy = "mercador")
 	private List<Itetabpr> itens = new ArrayList<Itetabpr>();
 	
 /*	@Column(length=4)
