@@ -37,9 +37,8 @@ public class Itetabpr implements Serializable {
 	@Column
 	private Double valpro;
 
-	@ManyToOne(targetEntity = Mercador.class, fetch = FetchType.EAGER)
-	@Cascade(CascadeType.ALL)
-	@JoinColumn(name = "codmer")
+	@ManyToOne
+//	@JoinColumn(name = "codmer")
 	private Mercador mercador;
    
 	
