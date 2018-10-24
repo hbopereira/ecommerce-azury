@@ -1,24 +1,13 @@
 package org.techforumist.jwt.domain;
 
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
-import org.hibernate.annotations.Type;
 
 @Entity
 @Table(name="mercador")
@@ -36,6 +25,9 @@ public class Mercador  {
 
 	@Column(length=13)
 	private String codbar;
+	
+	@OneToMany
+	private Itetabpr ite;
 	
 /*	@Column(length=4)
 	private String codtam;
@@ -175,6 +167,15 @@ public class Mercador  {
 
 	public void setMer(String mer) {
 		this.mer = mer;
+	}
+     
+
+	public Itetabpr getIte() {
+		return ite;
+	}
+
+	public void setItetabpr(Itetabpr itetab) {
+		this.ite = itetab;
 	}
 
 /*	public String getDesfor() {
@@ -473,6 +474,8 @@ public class Mercador  {
 	//	this.secmer = secmer;
 	//}
 	*/
+	
+	
 	
 
 	
