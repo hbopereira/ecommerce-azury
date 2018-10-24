@@ -46,7 +46,7 @@ public class Mercador  {
 	@Column(length=60)
 	private String mer;
 	
-	@Column(length=30)
+/*	@Column(length=30)
 	private String desfor;
 	
 	@Column(length=13)
@@ -55,7 +55,7 @@ public class Mercador  {
 	@Column(length=2)
 	private String uni;
 	
-	@Column
+/*	@Column
 	private Double vol;
 	
 	/*@Column
@@ -69,22 +69,22 @@ public class Mercador  {
 	
 	@Column
 	private Double valven;
-	@Column
-	private Double marluc;
+	//@Column
+	//private Double marluc;
 	/* @Column
 	  private Double estatu;*/
-	@Column
-	private Double estmin;
+	//@Column
+	//private Double estmin;
 	/*@Column
 	  private Double estest;*/
-	@Column
-	private Integer codfis;
+	/*@Column
+	/*private Integer codfis;
 	@Column
 	private Double porcom;
 	@Column
 	private Double aliicm;
 	@Column
-	private Integer utides;
+	private Integer utides;*/
 	@Column
 	private Integer ativo;
 	@Column
@@ -177,7 +177,7 @@ public class Mercador  {
 		this.mer = mer;
 	}
 
-	public String getDesfor() {
+/*	public String getDesfor() {
 		return desfor;
 	}
 
@@ -201,14 +201,14 @@ public class Mercador  {
 		this.uni = uni;
 	}
 
-	public Double getVol() {
+/*	public Double getVol() {
 		return vol;
 	}
 
 	public void setVol(Double vol) {
 		this.vol = vol;
 	}
-
+*/
 /*	public Double getPesliq() {
 		return pesliq;
 	}
@@ -241,7 +241,7 @@ public class Mercador  {
 		this.valven = valven;
 	}
 
-	public Double getMarluc() {
+/*	public Double getMarluc() {
 		return marluc;
 	}
 
@@ -288,7 +288,7 @@ public class Mercador  {
 	public void setUtides(Integer utides) {
 		this.utides = utides;
 	}
-
+*/
 	public Integer getAtivo() {
 		return ativo;
 	}
