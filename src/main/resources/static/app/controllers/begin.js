@@ -13,7 +13,7 @@ angular.module('JWTDemoApp')
 	};
 	
 	var listarProdutosPorTabelaPreco = function() {
-		$http.get('mercador').success(function(res) {
+		$http.get('itens').success(function(res) {
 			$scope.mercadoresPorTabelaPreco = res;
 			$scope.message = '';
 		}).error(function(error) {
