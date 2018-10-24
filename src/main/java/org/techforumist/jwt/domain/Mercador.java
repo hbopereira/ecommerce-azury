@@ -1,6 +1,9 @@
 package org.techforumist.jwt.domain;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,8 +29,8 @@ public class Mercador  {
 	@Column(length=13)
 	private String codbar;
 	
-	@OneToMany
-	private Itetabpr ite;
+	//@OneToMany
+	//private List<Itetabpr> itens = new ArrayList<Itetabpr>();
 	
 /*	@Column(length=4)
 	private String codtam;
@@ -165,18 +168,18 @@ public class Mercador  {
 		return mer;
 	}
 
-	public void setMer(String mer) {
-		this.mer = mer;
-	}
+	//public void setMer(String mer) {
+	//	this.mer = mer;
+	//}
      
 
-	public Itetabpr getIte() {
-		return ite;
-	}
-
-	public void setItetabpr(Itetabpr itetab) {
-		this.ite = itetab;
-	}
+	//public void setItens(List<Itetabpr> itens) {
+	//	this.itens = itens;
+	//}
+	
+	
+	
+	
 
 /*	public String getDesfor() {
 		return desfor;
