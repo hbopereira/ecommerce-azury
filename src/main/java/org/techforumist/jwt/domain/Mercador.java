@@ -24,10 +24,10 @@ import org.hibernate.annotations.Type;
 @Table(name="mercador")
 public class Mercador  {
 
-	@Id
+	/*@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="cod")
-	private Integer cod;
+	private Integer cod;*/
 	
 	//@OneToOne(targetEntity = Secmer.class, fetch = FetchType.EAGER)
 	//@Cascade(CascadeType.ALL)
@@ -137,14 +137,14 @@ public class Mercador  {
 	private String palcha;*/
 	
 	
-	public Integer getCod() {
+/*	public Integer getCod() {
 		return cod;
 	}
 
 	public void setCod(Integer cod) {
 		this.cod = cod;
 	}
-
+*/
 	public String getCodbar() {
 		return codbar;
 	}
