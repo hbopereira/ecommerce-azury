@@ -64,8 +64,7 @@ public class Mercador  {
 /*/	@Column
 	private Double valcus;
 	
-	@Column
-	private Double valven;
+	
 	//@Column
 	//private Double marluc;
 	/* @Column
