@@ -58,11 +58,11 @@ public class Mercador  {
 	@Column
 	private Double vol;
 	
-	@Column
+	/*@Column
 	private Double pesliq;
 	
 	@Column
-	private Double pesbru;
+	private Double pesbru;*/
 	
 	@Column
 	private Double valcus;
@@ -209,7 +209,7 @@ public class Mercador  {
 		this.vol = vol;
 	}
 
-	public Double getPesliq() {
+/*	public Double getPesliq() {
 		return pesliq;
 	}
 
@@ -224,7 +224,7 @@ public class Mercador  {
 	public void setPesbru(Double pesbru) {
 		this.pesbru = pesbru;
 	}
-
+*/
 	public Double getValcus() {
 		return valcus;
 	}
