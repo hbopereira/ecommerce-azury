@@ -36,7 +36,7 @@ angular.module('JWTDemoApp')
 	
 
 	listarProdutosPorTabelaPrecoSecaoVestido();
-	listarProdutosPorTabelaPrecoSecaoCigana();
-	listarProdutosPorTabelaPrecoSecaoCamisete();
+	//listarProdutosPorTabelaPrecoSecaoCigana();
+	//listarProdutosPorTabelaPrecoSecaoCamisete();
 
 });
