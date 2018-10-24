@@ -37,12 +37,12 @@ public class Mercador  {
 	@Column(length=13)
 	private String codbar;
 	
-	@Column(length=4)
+/*	@Column(length=4)
 	private String codtam;
 	
 	@Column
 	private Short gra;
-	
+	*/
 	@Column(length=60)
 	private String mer;
 	
@@ -64,7 +64,7 @@ public class Mercador  {
 	@Column
 	private Double pesbru;*/
 	
-	@Column
+/*/	@Column
 	private Double valcus;
 	
 	@Column
@@ -86,7 +86,7 @@ public class Mercador  {
 	@Column
 	private Integer utides;*/
 	@Column
-	private Integer ativo;
+	/*private Integer ativo;
 	@Column
 	private Integer filtro;
 	@Temporal(TemporalType.DATE)
@@ -134,7 +134,7 @@ public class Mercador  {
 	@Column
 	private Short des;
 	@Column(length=100)
-	private String palcha;
+	private String palcha;*/
 	
 	
 	public Integer getCod() {
@@ -153,7 +153,7 @@ public class Mercador  {
 		this.codbar = codbar;
 	}
 
-	public String getCodtam() {
+	/*public String getCodtam() {
 		return codtam;
 	}
 
@@ -167,7 +167,7 @@ public class Mercador  {
 
 	public void setGra(Short gra) {
 		this.gra = gra;
-	}
+	}*/
 
 	public String getMer() {
 		return mer;
@@ -225,7 +225,7 @@ public class Mercador  {
 		this.pesbru = pesbru;
 	}
 */
-	public Double getValcus() {
+	/*public Double getValcus() {
 		return valcus;
 	}
 
@@ -289,7 +289,7 @@ public class Mercador  {
 		this.utides = utides;
 	}
 */
-	public Integer getAtivo() {
+	/*public Integer getAtivo() {
 		return ativo;
 	}
 
@@ -472,7 +472,7 @@ public class Mercador  {
 	//public void setSecmer(Secmer secmer) {
 	//	this.secmer = secmer;
 	//}
-	
+	*/
 	
 
 	
