@@ -102,6 +102,63 @@
 	border-bottom-color: #666666;;
 }
 
+#top-search .input-group input :-moz-placeholder, #top-search .input-group input ::-webkit-input-placeholder
+	{
+	color: #000000;
+}
+
+#top-search .input-group {
+	border-color: #dddddd;
+}
+
+#top-search .input-group input {
+	background: #fafafa;
+	color: #000000;
+}
+
+#top-search .input-group button {
+	background: #fafafa;
+}
+
+#top-search .input-group button i {
+	color: #666666;
+}
+
+#top-search .input-group button:hover i {
+	color: #666666;
+}
+
+#top-search .input-group button:hover {
+	background: #e4e4e4;
+}
+
+#topbar .list-inline {
+	border-top: none;
+}
+
+#topbar .list-inline {
+	border-bottom: none;
+}
+
+#topbar .list-inline li a {
+	color: #000000;
+}
+
+#topbar .list-inline li a:hover {
+	color: #666666;
+}
+
+#topbar .list-inline i.glyphicon-shopping-cart {
+	background: #000000;
+	color: #ffffff;
+}
+
+#topbar ul.list-inline, #h-social .inner-content, #blog .inner-content,
+	#store-content .inner-content, footer .block {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>.open>a,
 	.navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus
 	{
@@ -144,14 +201,14 @@
 			</ul>
 		</div>
 	</div>
-</nav> -->
+</nav> 
 <section id="topbar">
 	<nav class="navbar navbar-default navbar-static-top">
 		<div class="container-fluid">
 			<div class="navbar-header"></div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<!--<li ng-show="user.username"><a ui-sref="users">Users</a></li> -->
+					<li ng-show="user.username"><a ui-sref="users">Users</a></li> 
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 
@@ -172,9 +229,41 @@
 					</a></li>
 				</ul>
 			</div>
-			<!--/.nav-collapse -->
+			<!--/.nav-collapse 
 		</div>
 	</nav>
+</section> -->
+<section id="topbar">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12">
+				<ul class="list-inline">
+					<li id="top-search">
+
+				
+					</li>
+					<ul class="pull-right">
+						<li><a href="tel:(44) 99930-1220"> <a
+								href="https://api.whatsapp.com/send?phone=5544999301220&text=Olá,%20Gostaria%20de%20conversar%20com%20um%20vendedor."
+								target="_blank"> Whatsapp <i
+									class="glyphicon glyphicon-earphone"></i> (44) 99930-1220
+							</a></li>
+						<li><a href="https://www.loja.azury.com.br/secure/my_account">
+								<i class="glyphicon glyphicon-user"></i> Minha conta
+						</a></li>
+						<li><a href="https://www.loja.azury.com.br/secure/login">
+								<i class="glyphicon glyphicon-log-in"></i> Entrar
+						</a></li>
+						<li><a href="https://www.loja.azury.com.br/cart/view_cart">
+								<i class="glyphicon glyphicon-shopping-cart"></i> Carrinho: <span
+								id="view_cartTotalItens">1</span> item - <span
+								id="view_cartTotalValue">R$ 259,90</span>
+						</a></li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</div>
 </section>
 
 
