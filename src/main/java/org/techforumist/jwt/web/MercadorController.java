@@ -19,7 +19,7 @@ public class MercadorController {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public List<Mercador> listarPorDestaque(){
-		return new ArrayList<Mercador>(mercadorRepo.findAll());
+		return new ArrayList<Mercador>(mercadorRepo.listarPorDestaque());
 	}
 
 }
