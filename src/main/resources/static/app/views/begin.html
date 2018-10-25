@@ -189,11 +189,11 @@
 			ng-repeat="ite in mercadoresPorTabelaPreco | filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
 			class="col-xs-3"><span></span> <br /> 
 			<img ng-src="app/imagens/1401160_a.jpg" width="390" class="img-thumbnail" style="height: 500px;">
-			<h4 align="center">{{ite.mercador.mer}}</h4> <!--
+			<h4 align="center">{{ite.codbar}}</h4> <!--
 			<h4 ng-show="user.username" align="center">R{{ite.valven | currency : symbol :
 				fractionSize}}</h4> -->
-			<h4 align="center">r {{ite.mercadpr.codbar}}</h4> 
-			<h4 align="center">c {{ite.valven}}</h4>
+			<h4 align="center">r {{ite.mer}}</h4> 
+			<!--<h4 align="center">c {{ite.valven}}</h4> -->
 			<br /> <br /> <br />
 		</li>
 	</ul>

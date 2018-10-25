@@ -21,14 +21,14 @@ import org.hibernate.annotations.CascadeType;
 @Table(name = "itetabpr")
 public class Itetabpr implements Serializable {
 
-	@Id
-	@Column
-	private Integer codtabpre;
-
 	//@Id
-	//@GeneratedValue(strategy=GenerationType.AUTO)
 	//@Column
-	//private Integer codmer;
+	//private Integer codtabpre;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column
+	private Integer codmer;
 
 	@Column
 	private Double valven;
@@ -37,18 +37,18 @@ public class Itetabpr implements Serializable {
 	@Column
 	private Double valpro;
 
-	@ManyToOne
-	@JoinColumn(name = "codmer")
-	private Mercador mercador;
+	//@ManyToOne
+	//@JoinColumn(name = "codmer")
+	//private Mercador mercador;
    
 	
-	public Mercador getMercador() {
-		return mercador;
-	}
+	//public Mercador getMercador() {
+		//return mercador;
+	//}
 
-	public void setMercador(Mercador mercador) {
-		this.mercador = mercador;
-	}
+	//public void setMercador(Mercador mercador) {
+		//this.mercador = mercador;
+	//}
 
 	// public void setCodtabpre(Integer codtabpre) {
 	// this.codtabpre = codtabpre;
@@ -90,13 +90,13 @@ public class Itetabpr implements Serializable {
 		return this.valpro;
 	}
 
-	public Integer getCodtabpre() {
-		return codtabpre;
-	}
+//public Integer getCodtabpre() {
+	//	return codtabpre;
+	//}
 
-	public void setCodtabpre(Integer codtabpre) {
-		this.codtabpre = codtabpre;
-	}
+	//public void setCodtabpre(Integer codtabpre) {
+		//this.codtabpre = codtabpre;
+//	}
 	
 
 }

@@ -14,9 +14,14 @@ public interface MercadorRepository extends JpaRepository<Mercador, Integer>{
 	
 //	@Query(value = "select * from mercador " + "left join itetabpr on itetabpr.codmer = mercador.cod "
 //			+ "where vissit=1 " + "and itetabpr.codtabpre=1" + "order by mercador.des desc ", nativeQuery = true)
-	@Query(value = "select max(cod) cod, codbar, mer from mercador where mercador.vissit=1 group by codbar, mer, des order by mercador.des desc ", 
+	@Query(value = "select max(cod) cod, codbar, mer, max(itetabpr.valven) valvenmax, min(itetabpr.valven) valvenmin " + 
+			"from mercador " + 
+			"left join itetabpr on itetabpr.codmer = mercador.cod "
+		  + "where mercador.vissit = 1 " + 
+			"group by codbar, mer ", 
        nativeQuery = true)
 	public List<Mercador> listarPorDestaque();
+	
 	
 
 	@Query(value = "select * from mercador limit 10", nativeQuery = true)
