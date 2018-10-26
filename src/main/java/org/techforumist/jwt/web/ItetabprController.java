@@ -29,20 +29,21 @@ public class ItetabprController {
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value={"/porVestido"})
-	public List<ResumoMercador> ListarPorSecaoVestido() {
-       return new ArrayList<ResumoMercador>(mercadordao.retornaConsultaMercadoresVestido());
+	public List<Itetabpr> listarTodosVestido() {
+	   	return new ArrayList<Itetabpr>(itensRepo.listarProdutoVestido());
 	}
 	
 
 	@RequestMapping(method = RequestMethod.GET, value={"/porCamisete"})
-	public List<ResumoMercador> ListarPorSecaoCamisete() {
-       return new ArrayList<ResumoMercador>(mercadordao.retornaConsultaCamisete());
+	public List<Itetabpr> listarTodosCamisete() {
+	   	return new ArrayList<Itetabpr>(itensRepo.listarProdutoCamisete());
 	}
 	
 
 	@RequestMapping(method = RequestMethod.GET, value={"/porCigana"})
-	public List<ResumoMercador> ListarPorSecaoCigana() {
-       return new ArrayList<ResumoMercador>(mercadordao.retornaConsultaCigana());
+	public List<Itetabpr> listarTodosCigana() {
+	   	return new ArrayList<Itetabpr>(itensRepo.listarProdutoCigana());
+	}
 	}
 
-}
+
