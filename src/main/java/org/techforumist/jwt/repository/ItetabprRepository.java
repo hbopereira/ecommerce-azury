@@ -29,7 +29,7 @@ public interface ItetabprRepository extends JpaRepository<Itetabpr, Integer>{
 			"left join mercador on mercador.cod = itetabpr.codmer "
 			+"left join secmer on secmer.cod = mercador.codsecmer " +
 		    "where mercador.vissit = 1 and itetabpr.codtabpre=1 "
-		    +"and secmer.secmer like '%Vestido%' "
+		    +"and secmer.cod = 6 "
 		    //+ " and mercador.codsecmer>=:inicio and mercador.codsecmer<=fim "
 		    , nativeQuery = true)
 	public List<Itetabpr> listarProdutoVestido();
@@ -39,7 +39,7 @@ public interface ItetabprRepository extends JpaRepository<Itetabpr, Integer>{
 			"left join mercador on mercador.cod = itetabpr.codmer "
 			+"left join secmer on secmer.cod = mercador.codsecmer " +
 		    "where mercador.vissit = 1 and itetabpr.codtabpre=1 "
-		    +"and secmer.secmer like '%Camisete%' "
+		    +"and secmer.cod = 2 "
 		    //+ " and mercador.codsecmer>=:inicio and mercador.codsecmer<=fim "
 		    , nativeQuery = true)
 	public List<Itetabpr> listarProdutoCamisete();
@@ -50,7 +50,7 @@ public interface ItetabprRepository extends JpaRepository<Itetabpr, Integer>{
 			"left join mercador on mercador.cod = itetabpr.codmer "
 			+"left join secmer on secmer.cod = mercador.codsecmer " +
 		    "where mercador.vissit = 1 and itetabpr.codtabpre=1 "
-		    +"and secmer.secmer like '%Cigana%' "
+		    +"and secmer.cod = 1 "
 		    //+ " and mercador.codsecmer>=:inicio and mercador.codsecmer<=fim "
 		    , nativeQuery = true)
 	public List<Itetabpr> listarProdutoCigana();
