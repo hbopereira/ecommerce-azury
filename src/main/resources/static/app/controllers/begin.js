@@ -66,6 +66,6 @@ angular.module('JWTDemoApp')
 	// listarProdutosPorTabelaPrecoSecaoVestido();
 	// listarProdutosPorTabelaPrecoSecaoCigana();
 	// listarProdutosPorTabelaPrecoSecaoCamisete();
-	selecionar(key);
+	selecionar();
 
 });
