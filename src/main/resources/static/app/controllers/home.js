@@ -14,6 +14,16 @@ angular.module('JWTDemoApp')
 			$scope.message = error.message;
 		});
 	};
+	
+	var listarProdutosPorTabelaPrecoESecao = function() {
+		$http.get('itens').success(function(res) {
+			$scope.mercadoresPorTabelaPrecoSecao = res;
+			$scope.message = '';
+		}).error(function(error) {
+			$scope.message = error.message;
+		});
+	};
 
 	listarProdutosPorTabelaPreco();
+	listarProdutosPorTabelaPrecoESecao();
 });
