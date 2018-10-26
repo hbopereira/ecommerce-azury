@@ -30,13 +30,13 @@ angular.module('JWTDemoApp')
 		}).error(function(error) {
 			$scope.message = error.message;
 		});
-	};*/
+	};
 	
 	
 	
 
 	listarProdutosPorTabelaPrecoSecaoVestido();
-	//listarProdutosPorTabelaPrecoSecaoCigana();
-	//listarProdutosPorTabelaPrecoSecaoCamisete();
+    listarProdutosPorTabelaPrecoSecaoCigana();
+	listarProdutosPorTabelaPrecoSecaoCamisete();
 
 });
