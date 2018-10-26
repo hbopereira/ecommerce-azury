@@ -41,7 +41,7 @@ angular.module('JWTDemoApp')
 		});
 	};*/
 
-	listarSecaoPorProduto();
+	//listarSecaoPorProduto();
 
 	var listarProdutosPorTabelaPrecoSecaoVestido = function() {
 		$http.get('itens/porVestido').success(function(res) {
