@@ -4,16 +4,12 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
 
 @SuppressWarnings("serial")
 @Entity
@@ -37,9 +33,9 @@ public class Itetabpr implements Serializable {
 	@Column
 	private Double valpro;
 
-	//@ManyToOne
-	//@JoinColumn(name = "codmer")
-	//private Mercador mercador;
+	@OneToOne
+	@JoinColumn(name = "codmer")
+	private Mercador mercador;
    
 	
 	//public Mercador getMercador() {
@@ -89,6 +85,24 @@ public class Itetabpr implements Serializable {
 	public Double getValpro() {
 		return this.valpro;
 	}
+
+	public Integer getCodmer() {
+		return codmer;
+	}
+
+	public void setCodmer(Integer codmer) {
+		this.codmer = codmer;
+	}
+
+	public Mercador getMercador() {
+		return mercador;
+	}
+
+	public void setMercador(Mercador mercador) {
+		this.mercador = mercador;
+	}
+	
+	
 
 //public Integer getCodtabpre() {
 	//	return codtabpre;

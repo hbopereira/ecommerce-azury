@@ -1,25 +1,27 @@
 package org.techforumist.jwt.web;
 
-import java.util.ArrayList;
+import java.sql.SQLException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.techforumist.jwt.domain.Mercador;
-import org.techforumist.jwt.repository.MercadorRepository;
+import org.techforumist.jwt.bean.ItetabprBean;
+import org.techforumist.jwt.domain.ResumoMercador;
 
 @RestController
 @RequestMapping("/resumo")
+@Component
 public class ResumoMercadorController {
-   
+	
 	@Autowired
-	private MercadorRepository repoMercador;
+	private ItetabprBean daoMercador;
 	
 	@GetMapping
-	public List<Mercador> listarTodosPorDestaque(){
-		return new ArrayList<Mercador>(repoMercador.listarPorDestaque());
+	public List<ResumoMercador> listarTodosPorDestaque() throws SQLException{
+		return daoMercador.retornaConsultaMercadores();
 	}
 
 }

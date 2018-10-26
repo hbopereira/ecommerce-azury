@@ -1,7 +1,7 @@
 angular.module('JWTDemoApp')
 // Creating the Angular Controller
 .controller('BeginController', function($http, $scope) {
-	$scope.pageSize = "4";
+	$scope.pageSize = "400";
 	$scope.currentPage = "1";
 	
 	$scope.imagens = {
@@ -13,7 +13,7 @@ angular.module('JWTDemoApp')
 	};
 	
 	var listarProdutosPorTabelaPreco = function() {
-		$http.get('resumo').success(function(res) {
+		$http.get('itens').success(function(res) {
 			$scope.mercadoresPorTabelaPreco = res;
 			$scope.message = '';
 		}).error(function(error) {

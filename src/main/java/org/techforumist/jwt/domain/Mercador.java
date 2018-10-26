@@ -1,18 +1,18 @@
 package org.techforumist.jwt.domain;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Cascade;
 
 @Entity
 @Table(name="mercador")
@@ -23,10 +23,21 @@ public class Mercador  {
 	@Column(name="cod")
 	private Integer cod;
 	
-	//@OneToOne(targetEntity = Secmer.class, fetch = FetchType.EAGER)
-	//@Cascade(CascadeType.ALL)
-	//@JoinColumn(name = "codsecmer")
-	//private Secmer secmer;
+	@OneToOne(targetEntity = Secmer.class, fetch = FetchType.EAGER)
+	@JoinColumn(name = "codsecmer")
+	private Secmer secmer;
+
+	public Secmer getSecmer() {
+		return secmer;
+	}
+
+	public void setSecmer(Secmer secmer) {
+		this.secmer = secmer;
+	}
+
+	public void setMer(String mer) {
+		this.mer = mer;
+	}
 
 	@Column(length=13)
 	private String codbar;
@@ -34,10 +45,10 @@ public class Mercador  {
 	//@OneToMany(cascade=CascadeType.ALL, mappedBy="mercador")
 	//private List<Itetabpr> itens = new ArrayList<Itetabpr>();
 	
-/*	@Column(length=4)
+	@Column(length=4)
 	private String codtam;
 	
-	@Column
+/*	@Column
 	private Short gra;
 	*/
 	@Column(length=60)
@@ -149,14 +160,14 @@ public class Mercador  {
 		this.codbar = codbar;
 	}
 
-	/*public String getCodtam() {
+	public String getCodtam() {
 		return codtam;
 	}
 
 	public void setCodtam(String codtam) {
 		this.codtam = codtam;
 	}
-
+/*
 	public Short getGra() {
 		return gra;
 	}

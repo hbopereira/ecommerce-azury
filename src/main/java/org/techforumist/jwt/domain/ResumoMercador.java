@@ -6,7 +6,8 @@ public class ResumoMercador {
 	private String mer;
 	private Double valvenmax;
 	private Double valvenmin;
-
+	private String secmer;
+ 
 	public String getCodbar() {
 		return codbar;
 	}
@@ -38,5 +39,20 @@ public class ResumoMercador {
 	public void setValvenmin(Double valvenmin) {
 		this.valvenmin = valvenmin;
 	}
+
+	public String getSecmer() {
+		return secmer;
+	}
+
+	//public void setSecmer(String secmer) {
+		//this.secmer = secmer;
+	//}
+
+	public void setSecmer(String secmer2) {
+		this.secmer = secmer2;
+		
+	}
+	
+	
 
 }
