@@ -4,7 +4,7 @@ angular.module('JWTDemoApp')
 	$scope.pageSize = "400";
 	$scope.currentPage = "1";
 
-	$scope.mercadoresPorTabelaPreco = {};
+	//$scope.mercadoresPorTabelaPreco = {};
 	$scope.selecionados = {};
 
 	$scope.imagens = {
