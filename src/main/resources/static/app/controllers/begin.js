@@ -21,7 +21,6 @@ angular.module('JWTDemoApp')
 		if (!$scope.selecionados[key])
 			$scope.selecionados[key] = 0;
 		$scope.selecionados[key]++;
-		$scope.selecionados[value];
 	}
 	
 	
