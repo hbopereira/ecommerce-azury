@@ -5,7 +5,7 @@ angular.module('JWTDemoApp')
 	$scope.currentPage = "1";
 
 	$scope.mercadoresPorTabelaPreco = [];
-	this.selecionados = {};
+	$scope.selecionados = {};
 
 	$scope.imagens = {
 		img : [ {
@@ -19,8 +19,8 @@ angular.module('JWTDemoApp')
 
 	$scope.selecionar = function(k) {
 		if (!selecionados[k])
-			selecionados[k] = 0;
-		selecionados[k]++;
+			$scope.selecionados[k] = 0;
+		$scope.selecionados[k]++;
 	}
 	
 	
