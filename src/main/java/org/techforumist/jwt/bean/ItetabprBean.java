@@ -50,6 +50,111 @@ public class ItetabprBean {
 		}
 		return lista;
 	}
+	
+	public List<ResumoMercador> retornaConsultaMercadoresVestido() {
+		List<Itetabpr> listaitetabpr = itetabpr.listarProdutoVestido();
+		List<ResumoMercador> lista = new ArrayList<ResumoMercador>();
+
+		for (Itetabpr ite : listaitetabpr) {
+
+			ResumoMercador mer = new ResumoMercador();
+			mer.setCodbar(ite.getMercador().getCodbar());
+			mer.setMer(ite.getMercador().getMer());
+			mer.setValvenmin(ite.getValven());
+			mer.setValvenmax(ite.getValven());
+			mer.setSecmer(ite.getMercador().getSecmer().getSecmer());
+			mer.setUrlfoto("app/imagens/"+ite.getMercador().getCodbar().trim()+"_a.jpg");
+
+			boolean existe = false;
+			for (ResumoMercador i : lista) {
+				existe = i.getCodbar().equals(mer.getCodbar());
+				if (existe) {
+					if (i.getValvenmax()<mer.getValvenmax()) {
+						i.setValvenmax(mer.getValvenmax());
+					}
+					if (i.getValvenmin()>mer.getValvenmin()) {
+						i.setValvenmin(mer.getValvenmin());
+					}
+					break;
+				}
+			}
+			if (!existe) {
+				lista.add(mer);
+			}
+
+		}
+		return lista;
+	}
+	
+	public List<ResumoMercador> retornaConsultaCigana() {
+		List<Itetabpr> listaitetabpr = itetabpr.listarProdutoCigana();
+		List<ResumoMercador> lista = new ArrayList<ResumoMercador>();
+
+		for (Itetabpr ite : listaitetabpr) {
+
+			ResumoMercador mer = new ResumoMercador();
+			mer.setCodbar(ite.getMercador().getCodbar());
+			mer.setMer(ite.getMercador().getMer());
+			mer.setValvenmin(ite.getValven());
+			mer.setValvenmax(ite.getValven());
+			mer.setSecmer(ite.getMercador().getSecmer().getSecmer());
+			mer.setUrlfoto("app/imagens/"+ite.getMercador().getCodbar().trim()+"_a.jpg");
+
+			boolean existe = false;
+			for (ResumoMercador i : lista) {
+				existe = i.getCodbar().equals(mer.getCodbar());
+				if (existe) {
+					if (i.getValvenmax()<mer.getValvenmax()) {
+						i.setValvenmax(mer.getValvenmax());
+					}
+					if (i.getValvenmin()>mer.getValvenmin()) {
+						i.setValvenmin(mer.getValvenmin());
+					}
+					break;
+				}
+			}
+			if (!existe) {
+				lista.add(mer);
+			}
+
+		}
+		return lista;
+	}
+	
+	public List<ResumoMercador> retornaConsultaCamisete() {
+		List<Itetabpr> listaitetabpr = itetabpr.listarProdutoCamisete();
+		List<ResumoMercador> lista = new ArrayList<ResumoMercador>();
+
+		for (Itetabpr ite : listaitetabpr) {
+
+			ResumoMercador mer = new ResumoMercador();
+			mer.setCodbar(ite.getMercador().getCodbar());
+			mer.setMer(ite.getMercador().getMer());
+			mer.setValvenmin(ite.getValven());
+			mer.setValvenmax(ite.getValven());
+			mer.setSecmer(ite.getMercador().getSecmer().getSecmer());
+			mer.setUrlfoto("app/imagens/"+ite.getMercador().getCodbar().trim()+"_a.jpg");
+
+			boolean existe = false;
+			for (ResumoMercador i : lista) {
+				existe = i.getCodbar().equals(mer.getCodbar());
+				if (existe) {
+					if (i.getValvenmax()<mer.getValvenmax()) {
+						i.setValvenmax(mer.getValvenmax());
+					}
+					if (i.getValvenmin()>mer.getValvenmin()) {
+						i.setValvenmin(mer.getValvenmin());
+					}
+					break;
+				}
+			}
+			if (!existe) {
+				lista.add(mer);
+			}
+
+		}
+		return lista;
+	}
 
 }
 
