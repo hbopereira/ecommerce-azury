@@ -17,11 +17,11 @@ angular.module('JWTDemoApp')
 		} ]
 	};
 
-	//$scope.selecionar = function(key) {
-		//if (!$scope.selecionados[key])
-			//$scope.selecionados[key] = 0;
-		//$scope.selecionados[key]++;
-	//}
+	$scope.selecionar = function(key) {
+		if (!$scope.selecionados[key])
+			$scope.selecionados[key] = $scope.mercadoresPorTabelaPrecoSecao;
+		$scope.selecionados[key]++;
+	}
 	
 	
 
