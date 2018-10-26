@@ -21,6 +21,7 @@ angular.module('JWTDemoApp')
 		if (!$scope.selecionados[k])
 			$scope.selecionados[k] = 0;
 		$scope.selecionados[k]++;
+		console.log($scope.selecionados[k])
 	}
 	
 	
