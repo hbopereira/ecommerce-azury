@@ -71,12 +71,10 @@
 	<ul>
 		<li
 			ng-repeat="ite in mercadoresPorTabelaPrecoSecaoCigana | filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
-			class="col-xs-3"><span></span> <br /> <img
-			src="app/imagens/1401160_a.jpg" width="390" class="img-thumbnail"
-			style="height: 500px;">
-			<h4 align="center">{{ite.mercador.mer}}</h4> <!-- <h4 align="center">R{{ite.valven | currency : symbol :
-				fractionSize}}</h4> -->
-			<h4 align="center">{{ite.mercador.secmer.secmer}}</h4> <br /> <br /> <br /></li>
+			class="col-xs-3"><span></span> <br />
+			<img ng-src={{value.urlfoto}} width="390" class="img-thumbnail" style="height: 500px;">
+			<h4 align="center">{{value.codbar}}</h4> 
+			<h4 align="center">{{value.mer}}</h4> <br /> <br /> <br /></li>
 	</ul>
 </div>
 
