@@ -15,7 +15,8 @@ import org.techforumist.jwt.domain.Mercador;
 public interface ItetabprRepository extends JpaRepository<Itetabpr, Integer>{
 	@Query(value =  "select itetabpr.* " + 
 			"from itetabpr " + 
-			"left join mercador on mercador.cod = itetabpr.codmer " +
+			"left join mercador on mercador.cod = itetabpr.codmer"
+			+"left join secmer on secmer.cod = mercador.codsecmer " +
 		    "where mercador.vissit = 1 and itetabpr.codtabpre=1  "
 		    //+ " and mercador.codsecmer>=:inicio and mercador.codsecmer<=fim "
 		    + "" , nativeQuery = true)
