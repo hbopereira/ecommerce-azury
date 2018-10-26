@@ -6,7 +6,7 @@ angular.module('JWTDemoApp')
 	
 	
 	var listarProdutosPorTabelaPrecoSecaoVestido = function() {
-		$http.get('itens').success(function(res) {
+		$http.get('itens/porVestido').success(function(res) {
 			$scope.mercadoresPorTabelaPrecoSecaoVestido = res;
 			$scope.message = '';
 		}).error(function(error) {
