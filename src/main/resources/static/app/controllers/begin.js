@@ -17,10 +17,11 @@ angular.module('JWTDemoApp')
 		} ]
 	};
 
-	$scope.selecionar = function(k) {
-		if (!$scope.selecionados[k])
-			$scope.selecionados[k] = 0;
-		$scope.selecionados[k]++;
+	$scope.selecionar = function(key) {
+		if (!$scope.selecionados[key])
+			$scope.selecionados[key] = 0;
+		$scope.selecionados[key]++;
+		$scope.selecionados[value];
 	}
 	
 	
