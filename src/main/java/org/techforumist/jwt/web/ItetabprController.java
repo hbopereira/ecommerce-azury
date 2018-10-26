@@ -42,7 +42,7 @@ public class ItetabprController {
 
 	@RequestMapping(method = RequestMethod.GET, value={"/porCigana"})
 	public List<Itetabpr> ListarPorSecaoCigana() {
-       return new ArrayList<Itetabpr>(itensRepo.listarProdutoCamisete());
+       return new ArrayList<Itetabpr>(itensRepo.listarProdutoCigana());
 	}
 
 }
