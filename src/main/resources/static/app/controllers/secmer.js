@@ -14,7 +14,7 @@ angular.module('JWTDemoApp')
 		});
 	};
 	
-	/*var listarProdutosPorTabelaPrecoSecaoCigana = function() {
+	var listarProdutosPorTabelaPrecoSecaoCigana = function() {
 		$http.get('itens/porCigana').success(function(res) {
 			$scope.mercadoresPorTabelaPrecoSecaoCigana = res;
 			$scope.message = '';
