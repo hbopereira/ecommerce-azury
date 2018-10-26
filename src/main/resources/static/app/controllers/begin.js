@@ -21,6 +21,7 @@ angular.module('JWTDemoApp')
 		if (!$scope.selecionados[key])
 			$scope.selecionados[key] = $scope.mercadoresPorTabelaPrecoSecao;
 		$scope.selecionados[key]++;
+		console.log('passou');
 	}
 	
 	
