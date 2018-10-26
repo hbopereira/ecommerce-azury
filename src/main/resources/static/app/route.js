@@ -66,7 +66,7 @@ angular.module('JWTDemoApp').config(function($stateProvider, $urlRouterProvider)
 		views : {
 			'content@' : {
 				templateUrl : 'app/views/secmer/secmerVestido.html',
-				controller : 'BeginController'
+				controller : 'SecmerController'
 			}
 		}
 	}).state('secmer-cigana', {
@@ -75,7 +75,7 @@ angular.module('JWTDemoApp').config(function($stateProvider, $urlRouterProvider)
 		views : {
 			'content@' : {
 				templateUrl : 'app/views/secmer/secmerCigana.html',
-				controller : 'BeginController'
+				controller : 'SecmerController'
 			}
 		}
 	}).state('secmer-camisete', {
