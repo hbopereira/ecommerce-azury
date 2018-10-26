@@ -7,7 +7,16 @@ public class ResumoMercador {
 	private Double valvenmax;
 	private Double valvenmin;
 	private String secmer;
+	private String urlfoto;
  
+	public String getUrlfoto() {
+		return urlfoto;
+	}
+
+	public void setUrlfoto(String urlfoto) {
+		this.urlfoto = urlfoto;
+	}
+
 	public String getCodbar() {
 		return codbar;
 	}

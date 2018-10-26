@@ -28,6 +28,7 @@ public class ItetabprBean {
 			mer.setValvenmin(ite.getValven());
 			mer.setValvenmax(ite.getValven());
 			mer.setSecmer(ite.getMercador().getSecmer().getSecmer());
+			mer.setUrlfoto("app/imagens/"+ite.getMercador().getCodbar().trim()+"_a.jpg");
 
 			boolean existe = false;
 			for (ResumoMercador i : lista) {
