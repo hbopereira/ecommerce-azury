@@ -186,7 +186,7 @@
 <div>
 	<ul>
 		<li
-			ng-repeat="(key, value) in selecionados| filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
+			ng-repeat="(key, value) in t| filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
 			class="col-xs-3"><span></span> <br /> 
 			<img ng-src="app/imagens/1401160_a.jpg" width="390" class="img-thumbnail" style="height: 500px;">
 			<h4 align="center">{{mercadoresPorTabelaPrecoSecao[key].mer}}</h4> 

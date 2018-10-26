@@ -17,11 +17,11 @@ angular.module('JWTDemoApp')
 		} ]
 	};
 
-	var selecionar = function(key) {
-		if (!$scope.selecionados[key])
-			$scope.selecionados[key] = 0;
-		$scope.selecionados[key]++;
-	}
+	//$scope.selecionar = function(key) {
+		//if (!$scope.selecionados[key])
+			//$scope.selecionados[key] = 0;
+		//$scope.selecionados[key]++;
+	//}
 	
 	
 
@@ -66,6 +66,5 @@ angular.module('JWTDemoApp')
 	// listarProdutosPorTabelaPrecoSecaoVestido();
 	// listarProdutosPorTabelaPrecoSecaoCigana();
 	// listarProdutosPorTabelaPrecoSecaoCamisete();
-	selecionar();
 
 });
