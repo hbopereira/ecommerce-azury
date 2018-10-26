@@ -4,7 +4,7 @@ angular.module('JWTDemoApp')
 	$scope.pageSize = "400";
 	$scope.currentPage = "1";
 
-	$scope.mercadoresPorTabelaPreco = [];
+	$scope.mercadoresPorTabelaPreco = {};
 	$scope.selecionados = {};
 
 	$scope.imagens = {
@@ -21,7 +21,6 @@ angular.module('JWTDemoApp')
 		if (!$scope.selecionados[k])
 			$scope.selecionados[k] = 0;
 		$scope.selecionados[k]++;
-		console.log($scope.selecionados[k])
 	}
 	
 	
