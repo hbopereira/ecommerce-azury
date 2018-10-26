@@ -74,16 +74,16 @@
 			class="col-xs-3"><span></span> <br /> <img
 			ng-src="app/imagens/1401160_a.jpg" width="390" class="img-thumbnail"
 			style="height: 500px;">
-			<h4 align="center">{{value.codbar}}</h4> 
+			<h4 align="center">{{value.codbar}}</h4>
 			<h4 align="center">{{value.mer}}</h4>
-			<h4 align="center">{{value.valvenmin}}</h4>
-			<h4 align="center">{{value.valvenmax}}</h4>   
-			<h4 align="center">{{value.secmer}}</h4> 
-				fractionSize}}</h4> <br /> <br /> <br />
-		</li>
-		<li class="animate-repeat" ng-if="mercadoresPorTabelaPreco.length === 0"><strong>Não
-				foi encontrado nenhum registro...</strong>
-	    </li>
+			<h4 align="center">{{value.valvenmin | currency : symbol :
+				fractionSize}}</h4>
+			<h4 align="center">{{value.valvenmax | currency : symbol :
+				fractionSize}}</h4>
+			</h4> <br /> <br /> <br /></li>
+		<li class="animate-repeat"
+			ng-if="mercadoresPorTabelaPreco.length === 0"><strong>Não
+				foi encontrado nenhum registro...</strong></li>
 	</ul>
 </div>
 
