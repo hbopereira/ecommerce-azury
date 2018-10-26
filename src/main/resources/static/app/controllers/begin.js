@@ -4,7 +4,7 @@ angular.module('JWTDemoApp')
 	$scope.pageSize = "400";
 	$scope.currentPage = "1";
 
-	//$scope.mercadoresPorTabelaPreco = {};
+	// $scope.mercadoresPorTabelaPreco = {};
 	$scope.selecionados = [];
 
 	$scope.imagens = {
@@ -17,14 +17,11 @@ angular.module('JWTDemoApp')
 		} ]
 	};
 
-	$scope.selecionar = function(key) {
-		if (!$scope.selecionados[key])
-			$scope.selecionados[key] = $scope.mercadoresPorTabelaPrecoSecao;
-		$scope.selecionados[key]++;
-		console.log('passou');
-	}
-	
-	
+	/*
+	 * $scope.selecionar = function(key) { if (!$scope.selecionados[key])
+	 * $scope.selecionados[key] = $scope.mercadoresPorTabelaPrecoSecao;
+	 * $scope.selecionados[key]++; console.log('passou'); }
+	 */
 
 	var listarProdutosPorTabelaPrecoESecao = function() {
 		$http.get('itens').success(function(res) {
@@ -42,30 +39,40 @@ angular.module('JWTDemoApp')
 		}).error(function(error) {
 			$scope.message = error.message;
 		});
-	};
+	};*/
 
 	listarSecaoPorProduto();
 
-	/*
-	 * var listarProdutosPorTabelaPrecoSecaoVestido = function() {
-	 * $http.get('itens/porVestido').success(function(res) {
-	 * $scope.mercadoresPorTabelaPrecoSecaoVestido = res; $scope.message = '';
-	 * }).error(function(error) { $scope.message = error.message; }); };
-	 * 
-	 * var listarProdutosPorTabelaPrecoSecaoCigana = function() {
-	 * $http.get('itens/porCigana').success(function(res) {
-	 * $scope.mercadoresPorTabelaPrecoSecaoCigana = res; $scope.message = '';
-	 * }).error(function(error) { $scope.message = error.message; }); };
-	 * 
-	 * var listarProdutosPorTabelaPrecoSecaoCamisete = function() {
-	 * $http.get('itens/porCamisete').success(function(res) {
-	 * $scope.mercadoresPorTabelaPrecoSecaoCamisete = res; $scope.message = '';
-	 * }).error(function(error) { $scope.message = error.message; }); };
-	 */
+	var listarProdutosPorTabelaPrecoSecaoVestido = function() {
+		$http.get('itens/porVestido').success(function(res) {
+			$scope.mercadoresPorTabelaPrecoSecaoVestido = res;
+			$scope.message = '';
+		}).error(function(error) {
+			$scope.message = error.message;
+		});
+	};
+
+	var listarProdutosPorTabelaPrecoSecaoCigana = function() {
+		$http.get('itens/porCigana').success(function(res) {
+			$scope.mercadoresPorTabelaPrecoSecaoCigana = res;
+			$scope.message = '';
+		}).error(function(error) {
+			$scope.message = error.message;
+		});
+	};
+
+	var listarProdutosPorTabelaPrecoSecaoCamisete = function() {
+		$http.get('itens/porCamisete').success(function(res) {
+			$scope.mercadoresPorTabelaPrecoSecaoCamisete = res;
+			$scope.message = '';
+		}).error(function(error) {
+			$scope.message = error.message;
+		});
+	};
 
 	listarProdutosPorTabelaPrecoESecao();
-	// listarProdutosPorTabelaPrecoSecaoVestido();
-	// listarProdutosPorTabelaPrecoSecaoCigana();
-	// listarProdutosPorTabelaPrecoSecaoCamisete();
+	listarProdutosPorTabelaPrecoSecaoVestido();
+	listarProdutosPorTabelaPrecoSecaoCigana();
+	listarProdutosPorTabelaPrecoSecaoCamisete();
 
 });

@@ -28,21 +28,21 @@ public class ItetabprController {
 	   	return new ArrayList<ResumoMercador>(mercadordao.retornaConsultaMercadores());
 	}
 
-	/*@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET, value={"/porVestido"})
 	public List<Itetabpr> ListarPorSecaoVestido() {
-       return new ArrayList<Itetabpr>(itensRepo.ListarPorTabelaDePrecoeSecaoVestido());
+       return new ArrayList<Itetabpr>(itensRepo.listarProdutoVestido());
 	}
 	
 
-	/*@RequestMapping(method = RequestMethod.GET, value={"/porCamisete"})
+	@RequestMapping(method = RequestMethod.GET, value={"/porCamisete"})
 	public List<Itetabpr> ListarPorSecaoCamisete() {
-       return new ArrayList<Itetabpr>(itensRepo.ListarPorTabelaDePrecoeSecaoCamisete());
+       return new ArrayList<Itetabpr>(itensRepo.listarProdutoCamisete());
 	}
 	
 
 	@RequestMapping(method = RequestMethod.GET, value={"/porCigana"})
 	public List<Itetabpr> ListarPorSecaoCigana() {
-       return new ArrayList<Itetabpr>(itensRepo.ListarPorTabelaDePrecoeSecaoCigana());
-	}*/
+       return new ArrayList<Itetabpr>(itensRepo.listarProdutoVestido());
+	}
 
 }

@@ -13,15 +13,49 @@ import org.techforumist.jwt.domain.Mercador;
 
 @Repository
 public interface ItetabprRepository extends JpaRepository<Itetabpr, Integer>{
+	
+	
 	@Query(value =  "select itetabpr.* " + 
 			"from itetabpr " + 
-			 "left join mercador on mercador.cod = itetabpr.codmer "
-			+"left join secmer on secmer.cod = mercador.codsecmer "
-			+"where codsecmer in (select codsecmer from mercador where vissit = '1')" +
-		    "and mercador.vissit = 1 and itetabpr.codtabpre=1  "
+			"left join mercador on mercador.cod = itetabpr.codmer "
+			+"left join secmer on secmer.cod = mercador.codsecmer " +
+		    "where mercador.vissit = 1 and itetabpr.codtabpre=1  "
 		    //+ " and mercador.codsecmer>=:inicio and mercador.codsecmer<=fim "
 		    + "" , nativeQuery = true)
 	public List<Itetabpr> listarProduto();
+	
+	@Query(value =  "select itetabpr.* " + 
+			"from itetabpr " + 
+			"left join mercador on mercador.cod = itetabpr.codmer "
+			+"left join secmer on secmer.cod = mercador.codsecmer " +
+		    "where mercador.vissit = 1 and itetabpr.codtabpre=1 "
+		    +"and mercador.mer like '%Vestido%' "
+		    //+ " and mercador.codsecmer>=:inicio and mercador.codsecmer<=fim "
+		    + "" , nativeQuery = true)
+	public List<Itetabpr> listarProdutoVestido();
+	
+	@Query(value =  "select itetabpr.* " + 
+			"from itetabpr " + 
+			"left join mercador on mercador.cod = itetabpr.codmer "
+			+"left join secmer on secmer.cod = mercador.codsecmer " +
+		    "where mercador.vissit = 1 and itetabpr.codtabpre=1 "
+		    +"and mercador.mer like '%Camisete%' "
+		    //+ " and mercador.codsecmer>=:inicio and mercador.codsecmer<=fim "
+		    + "" , nativeQuery = true)
+	public List<Itetabpr> listarProdutoCamisete();
+	
+	
+	@Query(value =  "select itetabpr.* " + 
+			"from itetabpr " + 
+			"left join mercador on mercador.cod = itetabpr.codmer "
+			+"left join secmer on secmer.cod = mercador.codsecmer " +
+		    "where mercador.vissit = 1 and itetabpr.codtabpre=1 "
+		    +"and mercador.mer like '%Cigana%' "
+		    //+ " and mercador.codsecmer>=:inicio and mercador.codsecmer<=fim "
+		    + "" , nativeQuery = true)
+	public List<Itetabpr> listarProdutoCigana();
+	
+	
 	
 	
 		
