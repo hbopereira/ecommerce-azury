@@ -21,6 +21,17 @@ angular.module('JWTDemoApp')
 		});
 	};
 	
+	var listarSecaoPorProduto = function() {
+		$http.get('secmer').success(function(res) {
+			$scope.secaoPorProduto = res;
+			$scope.message = '';
+		}).error(function(error) {
+			$scope.message = error.message;
+		});
+	};
+
+	listarSecaoPorProduto();
+	
 	/*var listarProdutosPorTabelaPrecoSecaoVestido = function() {
 		$http.get('itens/porVestido').success(function(res) {
 			$scope.mercadoresPorTabelaPrecoSecaoVestido = res;

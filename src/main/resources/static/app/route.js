@@ -9,7 +9,7 @@ angular.module('JWTDemoApp').config(function($stateProvider, $urlRouterProvider)
 		views : {
 			'nav@' : {
 				templateUrl : 'app/views/nav.html',
-				controller : 'NavController'
+				controller : 'BeginController'
 			}
 		}
 	}).state('login', {
