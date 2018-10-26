@@ -34,7 +34,7 @@ angular.module('JWTDemoApp')
 		});
 	};
 
-	var listarSecaoPorProduto = function() {
+	/*var listarSecaoPorProduto = function() {
 		$http.get('secmer').success(function(res) {
 			$scope.secaoPorProduto = res;
 			$scope.message = '';
