@@ -7,7 +7,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.techforumist.jwt.domain.Itetabpr;
-import org.techforumist.jwt.domain.ResumoMercador;
 import org.techforumist.jwt.repository.ItetabprRepository;
 import org.techforumist.jwt.resumo.MercadorResumo;
 
