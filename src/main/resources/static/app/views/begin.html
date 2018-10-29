@@ -1,4 +1,9 @@
 <style>
+#store-content .prod-frete, #store-content #product .prod-variants {
+	background: #ffffff;
+	border-color: #e0d0b2;
+}
+
 .zoom {
 	overflow: hidden;
 }
@@ -35,12 +40,9 @@
 }
 
 .modal .modal-dialog {
-	width: 100%;
+	width: 90%;
 }
 
-.modal .modal-dialog {
-	height: 100%;
-}
 
 .block-header {
 	border-bottom-color: #605c09;
@@ -255,7 +257,7 @@ li.box {
 	<ul>
 		<li class="box"
 			ng-repeat="(key, value) in mercadoresPorTabelaPrecoSecao| filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
-			class="col-xs-3"><span></span> <br /> <img
+			class="col-xs-3"><span></span> <br /> <img ng-click="selecionarMercadoria(value)" data-toggle="modal" data-target="#confirmar"
 			ng-src={{value.urlfoto}} width="390" class="img-thumbnail"
 			style="height: 500px;">
 			<h4 align="center">{{value.codbar}}</h4>
@@ -291,8 +293,23 @@ li.box {
 						<div class="form-group">
 							<h3>{{mercadorSelecionado.mer}}</h3>
 						</div>
-						<div class="panel panel-default">
-						 <p>{{mercadorSelecionado.codTam}}</p>
+						<br/>
+						<div class="prod-variants clearfix">
+							<ul>
+								<li class="prod-variant-li clearfix">
+									<div class="prod-variant">
+										<span class="prod-variant-title"> Selecione a opção
+											para <span class="color">Tamanho Numero:</span>
+										</span>
+										<ul class="list-inline">
+											<li>
+												<button class="sub btn btn-default prod-variant-btn"
+													>{{mercadorSelecionado.codTam}}</button>
+											</li>											
+										</ul>
+									</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
