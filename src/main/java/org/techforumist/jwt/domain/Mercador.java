@@ -26,7 +26,7 @@ public class Mercador  {
 	@OneToOne(targetEntity = Secmer.class, fetch = FetchType.EAGER)
 	@JoinColumn(name = "codsecmer")
 	private Secmer secmer;
-
+	
 	public Secmer getSecmer() {
 		return secmer;
 	}
@@ -179,6 +179,8 @@ public class Mercador  {
 	public String getMer() {
 		return mer;
 	}
+	
+	
 
 	//public void setMer(String mer) {
 	//	this.mer = mer;
@@ -489,6 +491,8 @@ public class Mercador  {
 	//	this.secmer = secmer;
 	//}
 	*/
+	
+	
 	
 	
 	

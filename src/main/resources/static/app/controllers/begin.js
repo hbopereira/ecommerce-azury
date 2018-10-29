@@ -88,5 +88,6 @@ angular.module('JWTDemoApp')
 	listarProdutosPorTabelaPrecoSecaoVestido();
 	listarProdutosPorTabelaPrecoSecaoCigana();
 	listarProdutosPorTabelaPrecoSecaoCamisete();
+	
 
 });

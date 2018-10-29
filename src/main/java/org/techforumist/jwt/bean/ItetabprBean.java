@@ -27,6 +27,7 @@ public class ItetabprBean {
 			mer.setMer(ite.getMercador().getMer());
 			mer.setValvenmin(ite.getValven());
 			mer.setValvenmax(ite.getValven());
+			mer.setCodTam(ite.getMercador().getCodtam());
 			mer.setSecmer(ite.getMercador().getSecmer().getSecmer());
 			mer.setUrlfoto("app/imagens/"+ite.getMercador().getCodbar().trim()+"_a.jpg");
 
@@ -62,6 +63,7 @@ public class ItetabprBean {
 			mer.setMer(ite.getMercador().getMer());
 			mer.setValvenmin(ite.getValven());
 			mer.setValvenmax(ite.getValven());
+			mer.setCodTam(ite.getMercador().getCodtam());
 			mer.setSecmer(ite.getMercador().getSecmer().getSecmer());
 			mer.setUrlfoto("app/imagens/"+ite.getMercador().getCodbar().trim()+"_a.jpg");
 
@@ -97,6 +99,7 @@ public class ItetabprBean {
 			mer.setMer(ite.getMercador().getMer());
 			mer.setValvenmin(ite.getValven());
 			mer.setValvenmax(ite.getValven());
+			mer.setCodTam(ite.getMercador().getCodtam());
 			mer.setSecmer(ite.getMercador().getSecmer().getSecmer());
 			mer.setUrlfoto("app/imagens/"+ite.getMercador().getCodbar().trim()+"_a.jpg");
 
@@ -132,6 +135,7 @@ public class ItetabprBean {
 			mer.setMer(ite.getMercador().getMer());
 			mer.setValvenmin(ite.getValven());
 			mer.setValvenmax(ite.getValven());
+			mer.setCodTam(ite.getMercador().getCodtam());
 			mer.setSecmer(ite.getMercador().getSecmer().getSecmer());
 			mer.setUrlfoto("app/imagens/"+ite.getMercador().getCodbar().trim()+"_a.jpg");
 

@@ -2,13 +2,13 @@ package org.techforumist.jwt.resumo;
 
 public class MercadorResumo {
 	
-
 	private String codbar;
 	private String mer;
 	private Double valvenmax;
 	private Double valvenmin;
 	private String secmer;
 	private String urlfoto;
+	private String codTam;
  
 	public String getUrlfoto() {
 		return urlfoto;
@@ -59,8 +59,17 @@ public class MercadorResumo {
 	//}
 
 	public void setSecmer(String secmer2) {
-		this.secmer = secmer2;
-		
+		this.secmer = secmer2;	
 	}
+	
+	public String getCodTam() {
+		return codTam;
+	}
+
+	public void setCodTam(String codTam) {
+		this.codTam = codTam;
+	}
+	
+	
 
 }
