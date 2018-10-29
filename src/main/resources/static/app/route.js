@@ -87,6 +87,15 @@ angular.module('JWTDemoApp').config(function($stateProvider, $urlRouterProvider)
 				controller : 'BeginController'
 			}
 		}
+	}).state('datalhe-mercadoria', {
+		parent : 'nav',
+		url : '/mercadoria-detalhe',
+		views : {
+			'content@' : {
+				templateUrl : 'app/views/mercador/detalheMercadoria.html',
+				controller : 'DetalheMercadoriaController'
+			}
+		}
 	}).state('page-not-found', {
 		parent : 'nav',
 		url : '/pagina-nao-econtrada',

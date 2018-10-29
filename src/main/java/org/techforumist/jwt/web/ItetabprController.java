@@ -1,16 +1,20 @@
 package org.techforumist.jwt.web;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.techforumist.jwt.bean.ItetabprBean;
-import org.techforumist.jwt.domain.Itetabpr;
+import org.techforumist.jwt.domain.Mercador;
 import org.techforumist.jwt.repository.ItetabprRepository;
+import org.techforumist.jwt.repository.MercadorRepository;
 import org.techforumist.jwt.resumo.MercadorResumo;
 
 @RestController
@@ -22,6 +26,19 @@ public class ItetabprController {
  
 	@Autowired
 	private ItetabprBean mercadorDao;
+	
+	@Autowired
+	private MercadorRepository mercadorRepo;
+	
+	@GetMapping("/{id}")
+	public ResponseEntity<Mercador> buscarMercadorPorCod(@PathVariable Integer cod){
+		Mercador mercador = mercadorRepo.findOne(cod);
+		if(mercador != null) {
+			return ResponseEntity.status(HttpStatus.ACCEPTED).body(mercador);
+		}else {
+			return new ResponseEntity<Mercador>(HttpStatus.NOT_FOUND);
+		}
+	}
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public List<MercadorResumo> listarTodos() {

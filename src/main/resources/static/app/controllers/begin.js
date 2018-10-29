@@ -1,21 +1,12 @@
 angular.module('JWTDemoApp')
 // Creating the Angular Controller
-.controller('BeginController', function($http, $scope) {
+.controller('BeginController', function($http, $scope, $state, $stateParams) {
 	$scope.pageSize = "10";
 	$scope.currentPage = "1";
+	$scope.mercadorSelecionado = {};
 
 	// $scope.mercadoresPorTabelaPreco = {};
 	$scope.selecionados = [];
-
-	$scope.imagens = {
-		img : [ {
-			src : 'app/imagens/1401160_a.jpg'
-		}, {
-			src : 'app/imagens/1401164_a.jpg'
-		}, {
-			src : 'app/imagens/1402172_a.jpg'
-		} ]
-	};
 
 	/*
 	 * $scope.selecionar = function(key) { if (!$scope.selecionados[key])
@@ -27,6 +18,7 @@ angular.module('JWTDemoApp')
 		$http.get('itens').success(function(res) {
 			$scope.mercadoresPorTabelaPrecoSecao = res;
 			$scope.message = '';
+			$scope.mercador = null;
 		}).error(function(error) {
 			$scope.message = error.message;
 		});
@@ -69,6 +61,28 @@ angular.module('JWTDemoApp')
 			$scope.message = error.message;
 		});
 	};
+	
+	$scope.selecionarMercadoria = function(mercador){
+		console.log(mercador);
+		//edit = true;
+		$scope.mercadorSelecionado = mercador;
+	}
+	
+	$scope.buscarPorCod = function(mercador) {
+		$http.get('itens/cod/'+mercador.cod).success(function(res) {
+			$scope.mercadorSelecionado =res;
+			console.log(mercadorSelecionado);
+		}).error(function(error) {
+			$scope.message = error.message;
+		});
+	}
+	
+   //buscarPorCod($stateParams.cod);
+	
+	
+	
+	
+	
 
 	listarProdutosPorTabelaPrecoESecao();
 	listarProdutosPorTabelaPrecoSecaoVestido();

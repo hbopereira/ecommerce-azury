@@ -3,6 +3,8 @@
 	color: #605c09;
 }
 
+ .modal .modal-dialog { width: 85%; } 
+
 .block-header {
 	border-bottom-color: #605c09;
 }
@@ -105,25 +107,23 @@
 }
 
 .container img {
-    max-width:1138px;
-
-    width: auto;
-    height: auto;
+	max-width: 1138px;
+	width: auto;
+	height: auto;
 }
 
 .navbar-inner {
-    background-color:transparent;
+	background-color: transparent;
 }
-
 
 li.box {
 	width: 395px;
 	display: inline-block;
 }
 
-.carousel-inner > img {
-      width: 5%;     
-  }
+.carousel-inner>img {
+	width: 5%;
+}
 
 .user {
 	font-weight: bold;
@@ -210,7 +210,7 @@ li.box {
 </h3>
 <br />
 
-<div class="container-fluid" >
+<div class="container-fluid">
 	<ul>
 		<li class="box"
 			ng-repeat="(key, value) in mercadoresPorTabelaPrecoSecao| filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
@@ -220,8 +220,9 @@ li.box {
 			<h4 align="center">{{value.codbar}}</h4>
 			<h4 align="center">{{value.mer}}</h4>
 			<h4 align="center">
-			<button class="btn btn-primary btn-sm" align="center">Detalhes</button>
-			</h4><!--  <h4 align="center">{{mercadoresPorTabelaPrecoSecao[key].mer}}</h4> <!--
+				<button ng-click="selecionarMercadoria(value)" data-toggle="modal"
+					data-target="#confirmar" class="btn btn-primary btn-sm">Detalhes</button>
+			</h4> <!--  <h4 align="center">{{mercadoresPorTabelaPrecoSecao[key].mer}}</h4> <!--
 			<h4 ng-show="user.username" align="center">R{{ite.valven | currency : symbol :
 				fractionSize}}</h4> 
 			 
@@ -232,6 +233,28 @@ li.box {
 
 			<br /> <br /> <br /></li>
 	</ul>
+</div>
+
+<div class="modal fade" id="confirmar" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-body">
+				<p class="well lead" align="center">Detalhes Produto</p>
+				<form name="dados" class="alert alert-warning" role="alert"></form>
+				<div class="row">
+					<div class="col-sm-8 col-md-8">
+						<img ng-src={{mercadorSelecionado.urlfoto}} width="390"
+							class="img-thumbnail" style="height: 500px;">
+					</div>
+					<div class="col-sm-8 col-md-3">
+						<div class="form-group">
+						  <h3>{{mercadorSelecionado.mer}}</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div align="center">
