@@ -21,29 +21,29 @@ public class ItetabprController {
 	private ItetabprRepository itensRepo;
  
 	@Autowired
-	private ItetabprBean mercadordao;
+	private ItetabprBean mercadorDao;
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public List<ResumoMercador> listarTodos() {
-	   	return new ArrayList<ResumoMercador>(mercadordao.retornaConsultaMercadores());
+	   	return new ArrayList<ResumoMercador>(mercadorDao.retornaConsultaMercadores());
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value={"/porVestido"})
-	public List<Itetabpr> listarTodosVestido() {
-	   	return new ArrayList<Itetabpr>(itensRepo.listarProdutoVestido());
+	public List<ResumoMercador> listarTodosVestido() {
+	   	return new ArrayList<ResumoMercador>(mercadorDao.retornaConsultaMercadoresVestido());
 	}
 	
 
 	@RequestMapping(method = RequestMethod.GET, value={"/porCamisete"})
-	public List<Itetabpr> listarTodosCamisete() {
-	   	return new ArrayList<Itetabpr>(itensRepo.listarProdutoCamisete());
+	public List<ResumoMercador> listarTodosCamisete() {
+	   	return new ArrayList<ResumoMercador>(mercadorDao.retornaConsultaMercadoresVestido());
 	}
 	
 
 	@RequestMapping(method = RequestMethod.GET, value={"/porCigana"})
-	public List<Itetabpr> listarTodosCigana() {
-	   	return new ArrayList<Itetabpr>(itensRepo.listarProdutoCigana());
+	public List<ResumoMercador> listarTodosCigana() {
+	   	return new ArrayList<ResumoMercador>(mercadorDao.retornaConsultaCigana());
 	}
-	}
+}
 
 
