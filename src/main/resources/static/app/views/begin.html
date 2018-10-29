@@ -43,7 +43,6 @@
 	width: 90%;
 }
 
-
 .block-header {
 	border-bottom-color: #605c09;
 }
@@ -257,9 +256,10 @@ li.box {
 	<ul>
 		<li class="box"
 			ng-repeat="(key, value) in mercadoresPorTabelaPrecoSecao| filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
-			class="col-xs-3"><span></span> <br /> <img ng-click="selecionarMercadoria(value)" data-toggle="modal" data-target="#confirmar"
-			ng-src={{value.urlfoto}} width="390" class="img-thumbnail"
-			style="height: 500px;">
+			class="col-xs-3"><span></span> <br /> <img
+			ng-click="selecionarMercadoria(value)" data-toggle="modal"
+			data-target="#confirmar" ng-src={{value.urlfoto}} width="390"
+			class="img-thumbnail" style="height: 500px;">
 			<h4 align="center">{{value.codbar}}</h4>
 			<h4 align="center">{{value.mer}}</h4>
 			<h4 align="center">
@@ -293,8 +293,8 @@ li.box {
 						<div class="form-group">
 							<h3>{{mercadorSelecionado.mer}}</h3>
 						</div>
-						<br/>
-						<div class="prod-variants clearfix">
+						<br />
+						<div class="panel panel-default">
 							<ul>
 								<li class="prod-variant-li clearfix">
 									<div class="prod-variant">
@@ -303,9 +303,29 @@ li.box {
 										</span>
 										<ul class="list-inline">
 											<li>
-												<button class="sub btn btn-default prod-variant-btn"
-													>{{mercadorSelecionado.codTam}}</button>
-											</li>											
+												<button class="sub btn btn-default prod-variant-btn">{{mercadorSelecionado.codTam}}</button>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div>
+						    <label>Quantidade</label>
+							<input maxlength="3" class="form-control" >
+						</div>
+						<br/>
+						<div class="panel panel-default">
+							<ul>
+								<li class="prod-variant-li clearfix">
+									<div class="prod-variant">
+										<span class="prod-variant-title"> Selecione a opção
+											para <span class="color">Cor:</span>
+										</span>
+										<ul class="list-inline">
+											<li>
+												<button class="sub btn btn-default prod-variant-btn">Branco</button>
+											</li>
 										</ul>
 									</div>
 								</li>
