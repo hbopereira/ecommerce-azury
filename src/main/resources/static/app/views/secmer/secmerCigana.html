@@ -1,3 +1,18 @@
+<style>
+.container img {
+    max-width:1138px;
+
+    width: auto;
+    height: auto;
+}
+
+
+li.box {
+	width: 350px;
+	display: inline-block;
+}
+</style
+
 <div class="container-fluid">
 	<form class="navbar-form navbar-right" role="search">
 		<div class="form-group">
@@ -67,9 +82,9 @@
 </h3>
 <br />
 
-<div>
+<div class="container-fluid">
 	<ul>
-		<li
+		<li class="box"
 			ng-repeat="(key, value) in mercadoresPorTabelaPrecoSecaoCigana | filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
 			class="col-xs-3"><span></span> <br />
 			<img ng-src={{value.urlfoto}} width="390" class="img-thumbnail" style="height: 500px;">

@@ -1,7 +1,7 @@
 angular.module('JWTDemoApp')
 // Creating the Angular Controller
 .controller('BeginController', function($http, $scope) {
-	$scope.pageSize = "400";
+	$scope.pageSize = "10";
 	$scope.currentPage = "1";
 
 	// $scope.mercadoresPorTabelaPreco = {};
