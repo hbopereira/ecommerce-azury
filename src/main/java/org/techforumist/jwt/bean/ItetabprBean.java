@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import org.techforumist.jwt.domain.Itetabpr;
 import org.techforumist.jwt.domain.ResumoMercador;
 import org.techforumist.jwt.repository.ItetabprRepository;
+import org.techforumist.jwt.resumo.MercadorResumo;
 
 @Repository
 public class ItetabprBean {
@@ -16,13 +17,13 @@ public class ItetabprBean {
 	@Autowired
 	private ItetabprRepository itetabpr;
 
-	public List<ResumoMercador> retornaConsultaMercadores() {
+	public List<MercadorResumo> retornaConsultaMercadores() {
 		List<Itetabpr> listaitetabpr = itetabpr.listarProduto();
-		List<ResumoMercador> lista = new ArrayList<ResumoMercador>();
+		List<MercadorResumo> lista = new ArrayList<MercadorResumo>();
 
 		for (Itetabpr ite : listaitetabpr) {
 
-			ResumoMercador mer = new ResumoMercador();
+			MercadorResumo mer = new MercadorResumo();
 			mer.setCodbar(ite.getMercador().getCodbar());
 			mer.setMer(ite.getMercador().getMer());
 			mer.setValvenmin(ite.getValven());
@@ -31,7 +32,7 @@ public class ItetabprBean {
 			mer.setUrlfoto("app/imagens/"+ite.getMercador().getCodbar().trim()+"_a.jpg");
 
 			boolean existe = false;
-			for (ResumoMercador i : lista) {
+			for (MercadorResumo i : lista) {
 				existe = i.getCodbar().equals(mer.getCodbar());
 				if (existe) {
 					if (i.getValvenmax()<mer.getValvenmax()) {
@@ -51,13 +52,13 @@ public class ItetabprBean {
 		return lista;
 	}
 	
-	public List<ResumoMercador> retornaConsultaMercadoresVestido() {
+	public List<MercadorResumo> retornaConsultaMercadoresVestido() {
 		List<Itetabpr> listaitetabpr = itetabpr.listarProdutoVestido();
-		List<ResumoMercador> lista = new ArrayList<ResumoMercador>();
+		List<MercadorResumo> lista = new ArrayList<MercadorResumo>();
 
 		for (Itetabpr ite : listaitetabpr) {
 
-			ResumoMercador mer = new ResumoMercador();
+			MercadorResumo mer = new MercadorResumo();
 			mer.setCodbar(ite.getMercador().getCodbar());
 			mer.setMer(ite.getMercador().getMer());
 			mer.setValvenmin(ite.getValven());
@@ -66,7 +67,7 @@ public class ItetabprBean {
 			mer.setUrlfoto("app/imagens/"+ite.getMercador().getCodbar().trim()+"_a.jpg");
 
 			boolean existe = false;
-			for (ResumoMercador i : lista) {
+			for (MercadorResumo i : lista) {
 				existe = i.getCodbar().equals(mer.getCodbar());
 				if (existe) {
 					if (i.getValvenmax()<mer.getValvenmax()) {
@@ -86,13 +87,13 @@ public class ItetabprBean {
 		return lista;
 	}
 	
-	public List<ResumoMercador> retornaConsultaCigana() {
+	public List<MercadorResumo> retornaConsultaCigana() {
 		List<Itetabpr> listaitetabpr = itetabpr.listarProdutoCigana();
-		List<ResumoMercador> lista = new ArrayList<ResumoMercador>();
+		List<MercadorResumo> lista = new ArrayList<MercadorResumo>();
 
 		for (Itetabpr ite : listaitetabpr) {
 
-			ResumoMercador mer = new ResumoMercador();
+			MercadorResumo mer = new MercadorResumo();
 			mer.setCodbar(ite.getMercador().getCodbar());
 			mer.setMer(ite.getMercador().getMer());
 			mer.setValvenmin(ite.getValven());
@@ -101,7 +102,7 @@ public class ItetabprBean {
 			mer.setUrlfoto("app/imagens/"+ite.getMercador().getCodbar().trim()+"_a.jpg");
 
 			boolean existe = false;
-			for (ResumoMercador i : lista) {
+			for (MercadorResumo i : lista) {
 				existe = i.getCodbar().equals(mer.getCodbar());
 				if (existe) {
 					if (i.getValvenmax()<mer.getValvenmax()) {
@@ -121,13 +122,13 @@ public class ItetabprBean {
 		return lista;
 	}
 	
-	public List<ResumoMercador> retornaConsultaCamisete() {
+	public List<MercadorResumo> retornaConsultaCamisete() {
 		List<Itetabpr> listaitetabpr = itetabpr.listarProdutoCamisete();
-		List<ResumoMercador> lista = new ArrayList<ResumoMercador>();
+		List<MercadorResumo> lista = new ArrayList<MercadorResumo>();
 
 		for (Itetabpr ite : listaitetabpr) {
 
-			ResumoMercador mer = new ResumoMercador();
+			MercadorResumo mer = new MercadorResumo();
 			mer.setCodbar(ite.getMercador().getCodbar());
 			mer.setMer(ite.getMercador().getMer());
 			mer.setValvenmin(ite.getValven());
@@ -136,7 +137,7 @@ public class ItetabprBean {
 			mer.setUrlfoto("app/imagens/"+ite.getMercador().getCodbar().trim()+"_a.jpg");
 
 			boolean existe = false;
-			for (ResumoMercador i : lista) {
+			for (MercadorResumo i : lista) {
 				existe = i.getCodbar().equals(mer.getCodbar());
 				if (existe) {
 					if (i.getValvenmax()<mer.getValvenmax()) {

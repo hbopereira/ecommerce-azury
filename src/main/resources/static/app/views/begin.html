@@ -111,6 +111,10 @@
     height: auto;
 }
 
+.navbar-inner {
+    background-color:transparent;
+}
+
 
 li.box {
 	width: 395px;
@@ -214,7 +218,10 @@ li.box {
 			ng-src={{value.urlfoto}} width="390" class="img-thumbnail"
 			style="height: 500px;">
 			<h4 align="center">{{value.codbar}}</h4>
-			<h4 align="center">{{value.mer}}</h4> <!--  <h4 align="center">{{mercadoresPorTabelaPrecoSecao[key].mer}}</h4> <!--
+			<h4 align="center">{{value.mer}}</h4>
+			<h4 align="center">
+			<button class="btn btn-primary btn-sm" align="center">Detalhes</button>
+			</h4><!--  <h4 align="center">{{mercadoresPorTabelaPrecoSecao[key].mer}}</h4> <!--
 			<h4 ng-show="user.username" align="center">R{{ite.valven | currency : symbol :
 				fractionSize}}</h4> 
 			 

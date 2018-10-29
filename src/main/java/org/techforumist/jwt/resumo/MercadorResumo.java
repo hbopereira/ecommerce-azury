@@ -1,6 +1,7 @@
-package org.techforumist.jwt.domain;
+package org.techforumist.jwt.resumo;
 
-public class ResumoMercador {
+public class MercadorResumo {
+	
 
 	private String codbar;
 	private String mer;
@@ -61,7 +62,5 @@ public class ResumoMercador {
 		this.secmer = secmer2;
 		
 	}
-	
-	
 
 }

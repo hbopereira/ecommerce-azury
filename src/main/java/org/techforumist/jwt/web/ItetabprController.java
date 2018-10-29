@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.techforumist.jwt.bean.ItetabprBean;
 import org.techforumist.jwt.domain.Itetabpr;
-import org.techforumist.jwt.domain.ResumoMercador;
 import org.techforumist.jwt.repository.ItetabprRepository;
+import org.techforumist.jwt.resumo.MercadorResumo;
 
 @RestController
 @RequestMapping("/itens")
@@ -24,25 +24,25 @@ public class ItetabprController {
 	private ItetabprBean mercadorDao;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public List<ResumoMercador> listarTodos() {
-	   	return new ArrayList<ResumoMercador>(mercadorDao.retornaConsultaMercadores());
+	public List<MercadorResumo> listarTodos() {
+	   	return new ArrayList<MercadorResumo>(mercadorDao.retornaConsultaMercadores());
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value={"/porVestido"})
-	public List<ResumoMercador> listarTodosVestido() {
-	   	return new ArrayList<ResumoMercador>(mercadorDao.retornaConsultaMercadoresVestido());
+	public List<MercadorResumo> listarTodosVestido() {
+	   	return new ArrayList<MercadorResumo>(mercadorDao.retornaConsultaMercadoresVestido());
 	}
 	
 
 	@RequestMapping(method = RequestMethod.GET, value={"/porCamisete"})
-	public List<ResumoMercador> listarTodosCamisete() {
-	   	return new ArrayList<ResumoMercador>(mercadorDao.retornaConsultaCamisete());
+	public List<MercadorResumo> listarTodosCamisete() {
+	   	return new ArrayList<MercadorResumo>(mercadorDao.retornaConsultaCamisete());
 	}
 	
 
 	@RequestMapping(method = RequestMethod.GET, value={"/porCigana"})
-	public List<ResumoMercador> listarTodosCigana() {
-	   	return new ArrayList<ResumoMercador>(mercadorDao.retornaConsultaCigana());
+	public List<MercadorResumo> listarTodosCigana() {
+	   	return new ArrayList<MercadorResumo>(mercadorDao.retornaConsultaCigana());
 	}
 }
 
