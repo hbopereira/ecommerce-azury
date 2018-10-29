@@ -36,7 +36,7 @@ public class ItetabprController {
 
 	@RequestMapping(method = RequestMethod.GET, value={"/porCamisete"})
 	public List<ResumoMercador> listarTodosCamisete() {
-	   	return new ArrayList<ResumoMercador>(mercadorDao.retornaConsultaMercadoresVestido());
+	   	return new ArrayList<ResumoMercador>(mercadorDao.retornaConsultaCamisete());
 	}
 	
 
