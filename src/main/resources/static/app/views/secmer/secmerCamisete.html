@@ -1,18 +1,15 @@
 <style>
 .container img {
-    max-width:1138px;
-
-    width: auto;
-    height: auto;
+	max-width: 1138px;
+	width: auto;
+	height: auto;
 }
 
-
 li.box {
-	width: 350px;
+	width: 395px;
 	display: inline-block;
 }
 </style
-
 <div class="container-fluid">
 	<form class="navbar-form navbar-right" role="search">
 		<div class="form-group">
@@ -86,9 +83,10 @@ li.box {
 	<ul>
 		<li class="box"
 			ng-repeat="(key, value) in mercadoresPorTabelaPrecoSecaoCamisete | filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
-			class="col-xs-3"><span></span> <br /> 
-			<img ng-src={{value.urlfoto}} width="390" class="img-thumbnail" style="height: 500px;">
-			<h4 align="center">{{value.codbar}}</h4> 
+			class="col-xs-3"><span></span> <br /> <img
+			ng-src={{value.urlfoto}} width="390" class="img-thumbnail"
+			style="height: 500px;">
+			<h4 align="center">{{value.codbar}}</h4>
 			<h4 align="center">{{value.mer}}</h4> <br /> <br /> <br /></li>
 	</ul>
 </div>
