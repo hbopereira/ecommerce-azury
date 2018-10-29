@@ -74,7 +74,11 @@
 			class="col-xs-3"><span></span> <br />
 			<img ng-src={{value.urlfoto}} width="390" class="img-thumbnail" style="height: 500px;">
 			<h4 align="center">{{value.codbar}}</h4> 
-			<h4 align="center">{{value.mer}}</h4></h4> <br /> <br /> <br /></li>
+			<h4 align="center">{{value.mer}}</h4>
+			<h4 ng-show="user.username" align="center">{{value.valvenmin | currency : symbol :
+				fractionSize}}</h4>
+			<h4 ng-show="user.username" align="center">{{value.valvenmax | currency : symbol :
+				fractionSize}}</h4> <br /> <br /> <br /></li>
 	</ul>
 </div>
 
