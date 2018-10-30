@@ -246,7 +246,7 @@ li.box {
 			ng-repeat="(key, value) in mercadoresPorTabelaPrecoSecaoCigana | filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
 			class="col-xs-3"><span></span> <br /> <img
 			ng-click="selecionarMercadoria(value)" data-toggle="modal"
-			data-target="#confirmar" ng-src={{value.urlfoto}} width="390"
+			data-target="#confirmar" ng-src={{value.urlfoto}} width="345"
 			class="img-thumbnail" style="height: 500px;">
 			<h4 align="center">{{value.codbar}}</h4>
 			<h4 align="center">{{value.mer}}</h4>
