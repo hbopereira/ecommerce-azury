@@ -24,17 +24,14 @@ angular.module('JWTDemoApp')
 		});
 	};
 
-	/*var listarSecaoPorProduto = function() {
-		$http.get('secmer').success(function(res) {
-			$scope.secaoPorProduto = res;
-			$scope.message = '';
-		}).error(function(error) {
-			$scope.message = error.message;
-		});
-	};*/
+	/*
+	 * var listarSecaoPorProduto = function() {
+	 * $http.get('secmer').success(function(res) { $scope.secaoPorProduto = res;
+	 * $scope.message = ''; }).error(function(error) { $scope.message =
+	 * error.message; }); };
+	 */
 
-	//listarSecaoPorProduto();
-
+	// listarSecaoPorProduto();
 	var listarProdutosPorTabelaPrecoSecaoVestido = function() {
 		$http.get('itens/porVestido').success(function(res) {
 			$scope.mercadoresPorTabelaPrecoSecaoVestido = res;
@@ -61,33 +58,27 @@ angular.module('JWTDemoApp')
 			$scope.message = error.message;
 		});
 	};
-	
-	$scope.selecionarMercadoria = function(mercador){
+
+	$scope.selecionarMercadoria = function(mercador) {
 		console.log(mercador);
-		//edit = true;
+		// edit = true;
 		$scope.mercadorSelecionado = mercador;
 	}
-	
+
 	$scope.buscarPorCod = function(mercador) {
-		$http.get('itens/cod/'+mercador.cod).success(function(res) {
-			$scope.mercadorSelecionado =res;
+		$http.get('itens/cod/' + mercador.cod).success(function(res) {
+			$scope.mercadorSelecionado = res;
 			console.log(mercadorSelecionado);
 		}).error(function(error) {
 			$scope.message = error.message;
 		});
 	}
-	
-   //buscarPorCod($stateParams.cod);
-	
-	
-	
-	
-	
+
+	// buscarPorCod($stateParams.cod);
 
 	listarProdutosPorTabelaPrecoESecao();
 	listarProdutosPorTabelaPrecoSecaoVestido();
 	listarProdutosPorTabelaPrecoSecaoCigana();
 	listarProdutosPorTabelaPrecoSecaoCamisete();
-	
 
 });

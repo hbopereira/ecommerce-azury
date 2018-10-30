@@ -87,9 +87,9 @@ angular.module('JWTDemoApp').config(function($stateProvider, $urlRouterProvider)
 				controller : 'BeginController'
 			}
 		}
-	}).state('datalhe-mercadoria', {
+	}).state('detalhe-mercadoria', {
 		parent : 'nav',
-		url : '/mercadoria-detalhe',
+		url : '/detalhe-mercadoria/:cod',
 		views : {
 			'content@' : {
 				templateUrl : 'app/views/mercador/detalheMercadoria.html',

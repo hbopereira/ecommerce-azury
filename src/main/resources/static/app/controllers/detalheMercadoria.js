@@ -12,8 +12,8 @@ angular.module('JWTDemoApp')
 		$scope.mercadorSelecionado = mercador;
 	}
 	
-	$scope.buscarPorCod = function(mercador) {
-		$http.get('itens/cod/'+mercador.cod).success(function(res) {
+	function buscarPorCod(cod) {
+		$http.get('itens/cod/'+cod).success(function(res) {
 			$scope.mercadorSelecionado =res;
 			console.log(mercadorSelecionado);
 		}).error(function(error) {
@@ -21,7 +21,7 @@ angular.module('JWTDemoApp')
 		});
 	}
 	
-   //buscarPorCod($stateParams.cod);
+   buscarPorCod($stateParams.cod);
 	
 
 });

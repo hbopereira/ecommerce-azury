@@ -11,7 +11,7 @@ import org.techforumist.jwt.repository.ItetabprRepository;
 import org.techforumist.jwt.resumo.MercadorResumo;
 
 @Repository
-public class ItetabprBean {
+public class MercadorBean {
 
 	@Autowired
 	private ItetabprRepository itetabpr;
@@ -28,17 +28,18 @@ public class ItetabprBean {
 			mer.setValvenmin(ite.getValven());
 			mer.setValvenmax(ite.getValven());
 			mer.setCodTam(ite.getMercador().getCodtam());
+		//	mer.setPadmer(ite.getMercador().getPadmer().getPadmer());
 			mer.setSecmer(ite.getMercador().getSecmer().getSecmer());
-			mer.setUrlfoto("app/imagens/"+ite.getMercador().getCodbar().trim()+"_a.jpg");
+			mer.setUrlfoto("app/imagens/" + ite.getMercador().getCodbar().trim() + "_a.jpg");
 
 			boolean existe = false;
 			for (MercadorResumo i : lista) {
 				existe = i.getCodbar().equals(mer.getCodbar());
 				if (existe) {
-					if (i.getValvenmax()<mer.getValvenmax()) {
+					if (i.getValvenmax() < mer.getValvenmax()) {
 						i.setValvenmax(mer.getValvenmax());
 					}
-					if (i.getValvenmin()>mer.getValvenmin()) {
+					if (i.getValvenmin() > mer.getValvenmin()) {
 						i.setValvenmin(mer.getValvenmin());
 					}
 					break;
@@ -51,7 +52,7 @@ public class ItetabprBean {
 		}
 		return lista;
 	}
-	
+
 	public List<MercadorResumo> retornaConsultaMercadoresVestido() {
 		List<Itetabpr> listaitetabpr = itetabpr.listarProdutoVestido();
 		List<MercadorResumo> lista = new ArrayList<MercadorResumo>();
@@ -64,17 +65,18 @@ public class ItetabprBean {
 			mer.setValvenmin(ite.getValven());
 			mer.setValvenmax(ite.getValven());
 			mer.setCodTam(ite.getMercador().getCodtam());
+			//mer.setPadmer(ite.getMercador().getPadmer().getPadmer());
 			mer.setSecmer(ite.getMercador().getSecmer().getSecmer());
-			mer.setUrlfoto("app/imagens/"+ite.getMercador().getCodbar().trim()+"_a.jpg");
+			mer.setUrlfoto("app/imagens/" + ite.getMercador().getCodbar().trim() + "_a.jpg");
 
 			boolean existe = false;
 			for (MercadorResumo i : lista) {
 				existe = i.getCodbar().equals(mer.getCodbar());
 				if (existe) {
-					if (i.getValvenmax()<mer.getValvenmax()) {
+					if (i.getValvenmax() < mer.getValvenmax()) {
 						i.setValvenmax(mer.getValvenmax());
 					}
-					if (i.getValvenmin()>mer.getValvenmin()) {
+					if (i.getValvenmin() > mer.getValvenmin()) {
 						i.setValvenmin(mer.getValvenmin());
 					}
 					break;
@@ -87,7 +89,7 @@ public class ItetabprBean {
 		}
 		return lista;
 	}
-	
+
 	public List<MercadorResumo> retornaConsultaCigana() {
 		List<Itetabpr> listaitetabpr = itetabpr.listarProdutoCigana();
 		List<MercadorResumo> lista = new ArrayList<MercadorResumo>();
@@ -100,17 +102,18 @@ public class ItetabprBean {
 			mer.setValvenmin(ite.getValven());
 			mer.setValvenmax(ite.getValven());
 			mer.setCodTam(ite.getMercador().getCodtam());
+			//mer.setPadmer(ite.getMercador().getPadmer().getPadmer());
 			mer.setSecmer(ite.getMercador().getSecmer().getSecmer());
-			mer.setUrlfoto("app/imagens/"+ite.getMercador().getCodbar().trim()+"_a.jpg");
+			mer.setUrlfoto("app/imagens/" + ite.getMercador().getCodbar().trim() + "_a.jpg");
 
 			boolean existe = false;
 			for (MercadorResumo i : lista) {
 				existe = i.getCodbar().equals(mer.getCodbar());
 				if (existe) {
-					if (i.getValvenmax()<mer.getValvenmax()) {
+					if (i.getValvenmax() < mer.getValvenmax()) {
 						i.setValvenmax(mer.getValvenmax());
 					}
-					if (i.getValvenmin()>mer.getValvenmin()) {
+					if (i.getValvenmin() > mer.getValvenmin()) {
 						i.setValvenmin(mer.getValvenmin());
 					}
 					break;
@@ -123,7 +126,7 @@ public class ItetabprBean {
 		}
 		return lista;
 	}
-	
+
 	public List<MercadorResumo> retornaConsultaCamisete() {
 		List<Itetabpr> listaitetabpr = itetabpr.listarProdutoCamisete();
 		List<MercadorResumo> lista = new ArrayList<MercadorResumo>();
@@ -136,17 +139,18 @@ public class ItetabprBean {
 			mer.setValvenmin(ite.getValven());
 			mer.setValvenmax(ite.getValven());
 			mer.setCodTam(ite.getMercador().getCodtam());
+			//mer.setPadmer(ite.getMercador().getPadmer().getPadmer());
 			mer.setSecmer(ite.getMercador().getSecmer().getSecmer());
-			mer.setUrlfoto("app/imagens/"+ite.getMercador().getCodbar().trim()+"_a.jpg");
+			mer.setUrlfoto("app/imagens/" + ite.getMercador().getCodbar().trim() + "_a.jpg");
 
 			boolean existe = false;
 			for (MercadorResumo i : lista) {
 				existe = i.getCodbar().equals(mer.getCodbar());
 				if (existe) {
-					if (i.getValvenmax()<mer.getValvenmax()) {
+					if (i.getValvenmax() < mer.getValvenmax()) {
 						i.setValvenmax(mer.getValvenmax());
 					}
-					if (i.getValvenmin()>mer.getValvenmin()) {
+					if (i.getValvenmin() > mer.getValvenmin()) {
 						i.setValvenmin(mer.getValvenmin());
 					}
 					break;
