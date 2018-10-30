@@ -146,7 +146,7 @@
 	</div>
 </nav> -->
 <section>
-	<nav class="navbar navbar-default navbar-static-top">
+	<nav class="navbar navbar-default navbar-static-top ">
 		<div class="container-fluid">
 			<div class="navbar-header"></div>
 			<div id="navbar" class="navbar-collapse collapse">
@@ -182,35 +182,54 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xs-4">
-				<div class="logo-base">
-					<a href="https://www.loja.azury.com.br/"> <img class="logo"
+				<div class="wrapper">
+					<a href="https://www.loja.azury.com.br/"> <img
+						class="img-responsive"
 						src="https://assets.xtechcommerce.com/uploads/logos/60af2ac3fb0e78f3e37c4c872f11fc42.png"
 						alt="Azury">
 					</a>
 				</div>
 			</div>
-			<div id="menu" class="col-xs-8 adjust">
-				<nav class="navbar navbar-default" role="navigation">
-					<ul class="nav navbar-nav">
-						<!--  <li ng-repeat="(key, value) in mercadoresPorTabelaPrecoSecao">
-						     <a ng-click="selecionar(key)">
-								<h4>{{value.secmer}}</h4>
-						     </a> 
-						</li> -->
-						<li ui-sref="begin"><a>
-								<h4>Home</h4>
-						</a></li>
-						<li ui-sref="secmer-vestido"><a>
-								<h4>Vestido</h4>
-						</a></li>
-						<li ui-sref="secmer-cigana"><a>
-								<h4>Cigana</h4>
-						</a></li>
-						<li ui-sref="secmer-camisete"><a>
-								<h4>Camisete</h4>
-						</a></li>
-					</ul>
-				</nav>
+			<div class="col-xs-8 adjust">
+				 <nav class="navbar navbar-default">
+					<div class="container-fluid">
+					
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed"
+								data-toggle="collapse"
+								data-target="#bs-example-navbar-collapse-1"
+								aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span> <span
+									class="icon-bar"></span> <span class="icon-bar"></span> <span
+									class="icon-bar"></span>
+							</button>
+						</div>
+
+					
+						<div class="collapse navbar-collapse"
+							id="bs-example-navbar-collapse-1">
+
+							<ul class="nav navbar-nav navbar-right">
+								<li><a ui-sref="begin">
+										<h4>Home</h4>
+								</a></li>
+								
+								<li><a ui-sref="secmer-cigana">
+										<h4>Cigana</h4>
+								</a></li>
+								
+								<li><a ui-sref="secmer-vestido">
+										<h4>Vestido</h4>
+								</a></li>
+								
+								<li><a ui-sref="secmer-camisete">
+										<h4>Camisete</h4>
+								</a></li>
+							</ul>
+						</div>
+					
+					</div>
+				</nav> 
 
 			</div>
 		</div>

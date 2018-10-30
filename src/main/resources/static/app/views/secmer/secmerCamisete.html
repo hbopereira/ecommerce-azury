@@ -1,15 +1,176 @@
 <style>
-.container img {
-	max-width: 1138px;
-	width: auto;
-	height: auto;
+#store-content .prod-frete, #store-content #product .prod-variants {
+	background: #ffffff;
+	border-color: #e0d0b2;
+}
+
+.zoom {
+	overflow: hidden;
+}
+
+.zoom img {
+	max-width: 100%;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.zoom:hover img {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.text-item {
+	position: absolute;
+	left: 5%;
+	right: 5%;
+	bottom: 20px;
+	z-index: 10;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #ffffff;
+	text-align: center;
+	font-weight: 700;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.block-header span {
+	color: #605c09;
+}
+
+.modal .modal-dialog {
+	width: 90%;
+}
+
+.block-header {
+	border-bottom-color: #605c09;
+}
+
+/* TOPO */
+#topbar {
+	background-color: #ffffff;
+}
+
+#topbar .list-inline {
+	border-top: none;
+}
+
+#topbar .list-inline {
+	border-bottom: none;
+}
+
+#topbar {
+	border-bottom: 1px solid #e4e4e4;
+}
+
+#topbar .list-inline li a {
+	color: #000000;
+}
+
+#topbar .list-inline li a:hover {
+	color: #666666;
+}
+
+#topbar .list-inline i.glyphicon-shopping-cart {
+	background: #000000;
+	color: #ffffff;
+}
+
+#topbar ul.list-inline, #h-social .inner-content, #blog .inner-content,
+	#store-content .inner-content, footer .block {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#menu {
+	background-color: #ffffff;
+}
+
+#menu .navbar {
+	border-top: none;
+}
+
+#menu {
+	border-top: 1px solid #e4e4e4;
+}
+
+#menu .navbar {
+	border-bottom: none;
+}
+
+#menu {
+	border-bottom: 2px solid #c4bc00;
+}
+
+#menu .navbar-nav>li:hover {
+	border-left: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
+}
+
+#menu .navbar-nav .dropdown-menu, #menu .navbar-nav .dropdown-submenu {
+	background: #000000;
+}
+
+#menu .navbar-nav .dropdown-menu a {
+	color: #eeeeee;
+}
+
+#menu .navbar-nav .dropdown-menu a .sub-caret {
+	border-left-color: #eeeeee !important;
+}
+
+#menu .navbar-nav .dropdown-menu a:hover {
+	color: #ffffff;
+}
+
+#menu .navbar-nav>li a .caret {
+	border-top-color: #000000;;
+	border-bottom-color: #000000;;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #000000;
+}
+
+#menu .navbar-nav>li a:hover .caret {
+	border-top-color: #666666;;
+	border-bottom-color: #666666;;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>.open>a,
+	.navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus
+	{
+	color: #666666;
+}
+
+.navbar-inner {
+	background-color: transparent;
 }
 
 li.box {
 	width: 395px;
 	display: inline-block;
 }
-</style
+
+.carousel-inner>img {
+	width: 5%;
+}
+
+.user {
+	font-weight: bold;
+}
+
+.logout {
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.wrapper {
+   width: 100%;
+}
+
+</style>
 <div class="container-fluid">
 	<form class="navbar-form navbar-right" role="search">
 		<div class="form-group">
@@ -65,9 +226,9 @@ li.box {
 	<br />
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-8">
-				<div class="bannerTarjaInf">
-					<img src="app/imagens/img3.jpg" />
+			<div class="col-xs-12">
+				<div class="wrapper">
+					<img class="img-responsive" src="app/imagens/img3.jpg" />
 				</div>
 			</div>
 		</div>
@@ -84,11 +245,77 @@ li.box {
 		<li class="box"
 			ng-repeat="(key, value) in mercadoresPorTabelaPrecoSecaoCamisete | filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
 			class="col-xs-3"><span></span> <br /> <img
-			ng-src={{value.urlfoto}} width="390" class="img-thumbnail"
-			style="height: 500px;">
+			ng-click="selecionarMercadoria(value)" data-toggle="modal"
+			data-target="#confirmar" ng-src={{value.urlfoto}} width="390"
+			class="img-thumbnail" style="height: 500px;">
 			<h4 align="center">{{value.codbar}}</h4>
-			<h4 align="center">{{value.mer}}</h4> <br /> <br /> <br /></li>
+			<h4 align="center">{{value.mer}}</h4>
+			<h4 align="center">
+				<button ng-click="selecionarMercadoria(value)" data-toggle="modal"
+					data-target="#confirmar" class="btn btn-primary btn-sm">Detalhes</button>
+			</h4>
+			<br /> <br /> <br /></li>
 	</ul>
+</div>
+
+<div class="modal fade" id="confirmar" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-body">
+				<p class="well lead" align="center">Detalhes Produto</p>
+				<form name="dados" class="alert alert-warning" role="alert"></form>
+				<div class="row">
+					<div class="col-sm-8 col-md-8 zoom">
+						<img ng-src={{mercadorSelecionado.urlfoto}} width="390"
+							class="img-thumbnail img-responsive" style="height: 500px;">
+					</div>
+					<div class="col-sm-8 col-md-4">
+						<div class="form-group">
+							<h3>{{mercadorSelecionado.mer}}</h3>
+						</div>
+						<br />
+						<div class="panel panel-default">
+							<ul>
+								<li class="prod-variant-li clearfix">
+									<div class="prod-variant">
+										<span class="prod-variant-title"> Selecione a opção
+											para <span class="color">Tamanho Numero:</span>
+										</span>
+										<ul class="list-inline">
+											<li>
+												<button class="sub btn btn-default prod-variant-btn">{{mercadorSelecionado.codTam}}</button>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<label>Quantidade</label> <input maxlength="3"
+								class="form-control">
+						</div>
+						<br />
+						<div class="panel panel-default">
+							<ul>
+								<li class="prod-variant-li clearfix">
+									<div class="prod-variant">
+										<span class="prod-variant-title"> Selecione a opção
+											para <span class="color">Cor:</span>
+										</span>
+										<ul class="list-inline">
+											<li>
+												<button class="sub btn btn-default prod-variant-btn">Branco</button>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div align="center">
