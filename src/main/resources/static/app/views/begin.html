@@ -262,7 +262,7 @@ li.box {
 			<h4 align="center">{{value.mer}}</h4>
 			<h4 align="center">
 				<button ng-click="selecionarMercadoria(value)" data-toggle="modal"
-					data-target="#confirmar" class="btn btn-primary btn-sm">Detalhes</button>
+					data-target="#confirmar" class="btn btn-success btn-sm">Comprar</button>
 			</h4> <!--  <h4 align="center">{{mercadoresPorTabelaPrecoSecao[key].mer}}</h4> <!--
 			<h4 ng-show="user.username" align="center">R{{ite.valven | currency : symbol :
 				fractionSize}}</h4> 
@@ -295,9 +295,9 @@ li.box {
 								</tr>
 							</thead>
 							<tbody>
-							  <tr ng-repeat="mer in  mercadoresPorTabelaPrecoSecao">
-							     <td>{{mercadorSelecionado.codTam}}</td>
-							  </tr>
+								<tr ng-repeat="mer in  mercadoresPorTabelaPrecoSecao">
+									<td>{{mercadorSelecionado.codTam}}</td>
+								</tr>
 						</table>
 						<div>
 							<h4>Total de Peças:</h4>
@@ -346,6 +346,9 @@ li.box {
 						</div>	-->
 					</div>
 				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Sair</button>
 			</div>
 		</div>
 	</div>
