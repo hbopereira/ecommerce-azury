@@ -1,28 +1,36 @@
 angular.module('JWTDemoApp')
 // Creating the Angular Controller
-.controller('BeginController', function($http, $scope, $state, $stateParams) {
-	$scope.pageSize = "10";
-	$scope.currentPage = "1";
-	$scope.mercadorSelecionado = {};
+.controller('BeginController', function($http, $scope, $state, $stateParams, MercadorService) {
+	var ctrl = this;
+	
+	ctrl.pageSize = "10";
+	ctrl.currentPage = "1";
+    
 
-	// $scope.mercadoresPorTabelaPreco = {};
-	$scope.selecionados = [];
+    function listarProdutosPorTabelaPrecoESecao () {
+      MercadorService.buscarTodos()
+        .then(function(response) {
+          ctrl.mercadoresPorTabelaPrecoSecao = response;
+        })
+        .catch(function(error) {
+          console.log("Erro ao carregar mercadorias");
+          console.log(error);
+        });
+    }
+    
+    listarProdutosPorTabelaPrecoESecao();
+	
+	
 
-	/*
-	 * $scope.selecionar = function(key) { if (!$scope.selecionados[key])
-	 * $scope.selecionados[key] = $scope.mercadoresPorTabelaPrecoSecao;
-	 * $scope.selecionados[key]++; console.log('passou'); }
-	 */
-
-	var listarProdutosPorTabelaPrecoESecao = function() {
-		$http.get('itens').success(function(res) {
+	/*var listarProdutosPorTabelaPrecoESecao = function() {
+		MercadorService.buscarTodos().success(function(res) {
 			$scope.mercadoresPorTabelaPrecoSecao = res;
 			$scope.message = '';
 			$scope.mercador = null;
 		}).error(function(error) {
 			$scope.message = error.message;
 		});
-	};
+	};*/
 
 	/*
 	 * var listarSecaoPorProduto = function() {
@@ -32,7 +40,7 @@ angular.module('JWTDemoApp')
 	 */
 
 	// listarSecaoPorProduto();
-	var listarProdutosPorTabelaPrecoSecaoVestido = function() {
+	/*var listarProdutosPorTabelaPrecoSecaoVestido = function() {
 		$http.get('itens/porVestido').success(function(res) {
 			$scope.mercadoresPorTabelaPrecoSecaoVestido = res;
 			$scope.message = '';
@@ -57,7 +65,7 @@ angular.module('JWTDemoApp')
 		}).error(function(error) {
 			$scope.message = error.message;
 		});
-	};
+	};*/
 
 	$scope.selecionarMercadoria = function(mercador) {
 		console.log(mercador);
@@ -65,20 +73,19 @@ angular.module('JWTDemoApp')
 		$scope.mercadorSelecionado = mercador;
 	}
 
-	$scope.buscarPorCod = function(mercador) {
-		$http.get('itens/cod/' + mercador.cod).success(function(res) {
-			$scope.mercadorSelecionado = res;
-			console.log(mercadorSelecionado);
-		}).error(function(error) {
-			$scope.message = error.message;
-		});
-	}
+	//$scope.buscarPorCod = function(mercador) {
+		//$http.get('itens/cod/' + mercador.cod).success(function(res) {
+			//$scope.mercadorSelecionado = res;
+			//console.log(mercadorSelecionado);
+		//}).error(function(error) {
+		//	$scope.message = error.message;
+		//});
+	//}
 
 	// buscarPorCod($stateParams.cod);
 
-	listarProdutosPorTabelaPrecoESecao();
-	listarProdutosPorTabelaPrecoSecaoVestido();
-	listarProdutosPorTabelaPrecoSecaoCigana();
-	listarProdutosPorTabelaPrecoSecaoCamisete();
+	//listarProdutosPorTabelaPrecoSecaoVestido();
+	//listarProdutosPorTabelaPrecoSecaoCigana();
+	//listarProdutosPorTabelaPrecoSecaoCamisete();
 
 });

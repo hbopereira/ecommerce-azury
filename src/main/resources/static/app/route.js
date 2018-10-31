@@ -48,7 +48,8 @@ angular.module('JWTDemoApp').config(function($stateProvider, $urlRouterProvider)
 		views : {
 			'content@' : {
 				templateUrl : 'app/views/begin.html',
-				controller : 'BeginController'
+				controller : 'BeginController',
+				controllerAs: 'ctrl'
 			}
 		}
 	}).state('itetabpr', {
@@ -75,7 +76,7 @@ angular.module('JWTDemoApp').config(function($stateProvider, $urlRouterProvider)
 		views : {
 			'content@' : {
 				templateUrl : 'app/views/secmer/secmerCigana.html',
-				controller : 'BeginController'
+				controller : 'BeginController'	
 			}
 		}
 	}).state('secmer-camisete', {
@@ -89,11 +90,12 @@ angular.module('JWTDemoApp').config(function($stateProvider, $urlRouterProvider)
 		}
 	}).state('detalhe-mercadoria', {
 		parent : 'nav',
-		url : '/detalhe-mercadoria/:cod',
+		url : '/mercador/:cod',
 		views : {
 			'content@' : {
 				templateUrl : 'app/views/mercador/detalheMercadoria.html',
-				controller : 'DetalheMercadoriaController'
+				controller : 'DetalheMercadoriaController',
+				controllerAs: 'ctrl'
 			}
 		}
 	}).state('page-not-found', {
