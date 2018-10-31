@@ -250,20 +250,21 @@ li.box {
 </h3>
 <br />
 
-<div class="container-fluid">
-	<ul>
-		<li class="box"
-			ng-repeat="(key, value) in mercadoresPorTabelaPrecoSecao| filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
-			class="col-xs-3"><span></span> <br /> <img
-			ng-click="selecionarMercadoria(value)" data-toggle="modal"
-			data-target="#confirmar" ng-src={{value.urlfoto}} width="345"
-			class="img-thumbnail" style="height: 500px;">
-			<h4 align="center">{{value.codbar}}</h4>
-			<h4 align="center">{{value.mer}}</h4>
-			<h4 align="center">
-				<button ng-click="selecionarMercadoria(value)" data-toggle="modal"
-					data-target="#confirmar" class="btn btn-success btn-sm">Comprar</button>
-			</h4> <!--  <h4 align="center">{{mercadoresPorTabelaPrecoSecao[key].mer}}</h4> <!--
+<section >
+	<div>
+		<ul class="container-fluid">
+			<li class="box"
+				ng-repeat="(key, value) in mercadoresPorTabelaPrecoSecao| filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
+				class="col-xs-3"><span></span> <br /> <img 
+				ng-click="selecionarMercadoria(value)" data-toggle="modal"
+				data-target="#confirmar" ng-src={{value.urlfoto}} 
+				class="img-thumbnail" style="height: 450px;">
+				<h4 align="center">{{value.codbar}}</h4>
+				<h4 align="center">{{value.mer}}</h4>
+				<h4 align="center">
+					<button ng-click="selecionarMercadoria(value)" data-toggle="modal"
+						data-target="#confirmar" class="btn btn-success btn-sm">Comprar</button>
+				</h4> <!--  <h4 align="center">{{mercadoresPorTabelaPrecoSecao[key].mer}}</h4> <!--
 			<h4 ng-show="user.username" align="center">R{{ite.valven | currency : symbol :
 				fractionSize}}</h4> 
 			 
@@ -272,38 +273,38 @@ li.box {
 			<h4 align="center">{{mercadoresPorTabelaPrecoSecao[key].valvenmax | currency : symbol : fractionSize}}</h4>
 			<h4 align="center">{{mercadoresPorTabelaPrecoSecao[key].secmer}}</h4> -->
 
-			<br /> <br /> <br /></li>
-	</ul>
-</div>
+				<br /> <br /> <br /></li>
+		</ul>
+	</div>
 
-<div class="modal fade" id="confirmar" role="dialog" tabindex="-1">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-body">
-				<p class="well lead" align="center">Detalhes Produto</p>
-				<form name="dados" class="alert alert-warning" role="alert"></form>
-				<div class="row">
-					<div class="col-sm-8 col-md-8 zoom">
-						<img ng-src={{mercadorSelecionado.urlfoto}} width="390"
-							class="img-thumbnail img-responsive" style="height: 500px;">
-					</div>
-					<div class="col-sm-8 col-md-4">
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th>Tamanhos</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr ng-repeat="mer in  mercadoresPorTabelaPrecoSecao">
-									<td>{{mercadorSelecionado.codTam}}</td>
-								</tr>
-						</table>
-						<div>
-							<h4>Total de Peças:</h4>
-							<h4>Valor Total:</h4>
+	<div class="modal fade" id="confirmar" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-body">
+					<p class="well lead" align="center">Detalhes Produto</p>
+					<form name="dados" class="alert alert-warning" role="alert"></form>
+					<div class="row">
+						<div class="col-sm-8 col-md-8 zoom">
+							<img ng-src={{mercadorSelecionado.urlfoto}} width="390"
+								class="img-thumbnail img-responsive" style="height: 500px;">
 						</div>
-						<!--  <div class="form-group">
+						<div class="col-sm-8 col-md-4">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>Tamanhos</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="mer in  mercadoresPorTabelaPrecoSecao">
+										<td>{{mercadorSelecionado.codTam}}</td>
+									</tr>
+							</table>
+							<div>
+								<h4>Total de Peças:</h4>
+								<h4>Valor Total:</h4>
+							</div>
+							<!--  <div class="form-group">
 							<h3>{{mercadorSelecionado.mer}}</h3>
 						</div>
 						<br />
@@ -344,15 +345,16 @@ li.box {
 								</li>
 							</ul>
 						</div>	-->
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Sair</button>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Sair</button>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
 <div align="center">
 	<pagination total-items="mercadoresPorTabelaPreco.length"
