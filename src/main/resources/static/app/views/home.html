@@ -243,7 +243,7 @@ li.box {
 <div class="container-fluid">
 	<ul>
 		<li class="box"
-			ng-repeat="(key, value) in mercadoresPorTabelaPrecoSecao | filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
+			ng-repeat="(key, value) in ctrl.mercadoresPorTabelaPrecoSecao | filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
 			class="col-xs-3"><span></span> <br /> <img
 			ng-click="selecionarMercadoria(value)" data-toggle="modal"
 			data-target="#confirmar" ng-src={{value.urlfoto}} width="345"

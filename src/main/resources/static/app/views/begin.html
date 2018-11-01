@@ -254,7 +254,7 @@ li.box {
 	<div class="wrapper">
 		<ul class="container-fluid">
 			<li class="box"
-				ng-repeat="(key, value) in ctrl.mercadoresPorTabelaPrecoSecao| filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
+				ng-repeat="(key, value) in ctrl.mercadores| filter:pesquisar | startFrom:(currentPage - 1) * pageSize | limitTo: pageSize "
 				class="col-xs-3"><span></span> <br /> <img 
 				ng-click="selecionarMercadoria(value)" data-toggle="modal"
 				data-target="#confirmar" ng-src={{value.urlfoto}} 
@@ -262,7 +262,7 @@ li.box {
 				<h4 align="center">{{value.codbar}}</h4>
 				<h4 align="center">{{value.mer}}</h4>
 				<h4 align="center">
-					<a href="/mercador/{{value.cod}}">Comprar</a>
+					<a href="#/detalhes/{{value.codbar}}" class="btn btn-primary">Comprar</a>
 				</h4> <!--  <h4 align="center">{{mercadoresPorTabelaPrecoSecao[key].mer}}</h4> <!--
 			<h4 ng-show="user.username" align="center">R{{ite.valven | currency : symbol :
 				fractionSize}}</h4> 

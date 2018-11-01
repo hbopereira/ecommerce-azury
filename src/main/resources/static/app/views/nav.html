@@ -191,9 +191,9 @@
 				</div>
 			</div>
 			<div class="col-xs-8 adjust">
-				 <nav class="navbar navbar-default">
+				<nav class="navbar navbar-default">
 					<div class="container-fluid">
-					
+
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle collapsed"
 								data-toggle="collapse"
@@ -205,16 +205,20 @@
 							</button>
 						</div>
 
-					
+
 						<div class="collapse navbar-collapse"
 							id="bs-example-navbar-collapse-1">
 
 							<ul class="nav navbar-nav navbar-right">
-								<li><a ui-sref="begin">
-										<h4>Destaque</h4>
+								<li ng-repeat="sec in secoes"><a>
+										<h4>{{sec.secmer}}</h4> <!-- <li>
+											<a ui-sref="/api/mercador?codsecmer={{sec.cod}}">
+												<h4>{{sec.secmer}}</h4>
+											</a>
+										</li>-->
 								</a></li>
-								
-								<li><a ui-sref="secmer-cigana">
+
+								<!-- 	<li><a ui-sref="secmer-cigana">
 										<h4>Cigana</h4>
 								</a></li>
 								
@@ -224,12 +228,12 @@
 								
 								<li><a ui-sref="secmer-camisete">
 										<h4>Camisete</h4>
-								</a></li>
+								</a></li> -->
 							</ul>
 						</div>
-					
+
 					</div>
-				</nav> 
+				</nav>
 
 			</div>
 		</div>

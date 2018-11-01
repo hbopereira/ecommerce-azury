@@ -14,5 +14,17 @@ angular.module('JWTDemoApp')
 				$state.go('login');
 			};
 			
+			
+			var listarSecoes = function() {
+				$http.get('secmer').success(function(res) {
+					$scope.secoes = res;
+					$scope.message = '';
+				}).error(function(error) {
+					$scope.message = error.message;
+				});
+			};
+			
+			listarSecoes();
+			
 
 		});

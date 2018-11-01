@@ -39,17 +39,8 @@ angular.module('JWTDemoApp').config(function($stateProvider, $urlRouterProvider)
 		views : {
 			'content@' : {
 				templateUrl : 'app/views/home.html',
-				controller : 'BeginController'
-			}
-		}
-	}).state('begin', {
-		parent : 'nav',
-		url : '/pagina-inicial',
-		views : {
-			'content@' : {
-				templateUrl : 'app/views/begin.html',
 				controller : 'BeginController',
-				controllerAs: 'ctrl'
+				controllerAs : 'ctrl'
 			}
 		}
 	}).state('itetabpr', {
@@ -88,9 +79,19 @@ angular.module('JWTDemoApp').config(function($stateProvider, $urlRouterProvider)
 				controller : 'BeginController'
 			}
 		}
+	}).state('begin', {
+		parent : 'nav',
+		url : '/pagina-inicial',
+		views : {
+			'content@' : {
+				templateUrl : 'app/views/begin.html',
+				controller : 'BeginController',
+				controllerAs: 'ctrl'
+			}
+		}
 	}).state('detalhe-mercadoria', {
 		parent : 'nav',
-		url : '/mercador/:cod',
+		url : '/detalhes/:codbar',
 		views : {
 			'content@' : {
 				templateUrl : 'app/views/mercador/detalheMercadoria.html',

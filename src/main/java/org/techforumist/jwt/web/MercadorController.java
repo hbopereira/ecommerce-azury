@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.techforumist.jwt.domain.Mercador;
 import org.techforumist.jwt.repository.MercadorRepository;
+import org.techforumist.jwt.resumo.MercadorResumido;
 
 @RestController
 @RequestMapping("/mercador")
@@ -17,10 +18,16 @@ public class MercadorController {
 	@Autowired
 	private MercadorRepository mercadorRepo;
 	
-	@RequestMapping(method=RequestMethod.GET)
-	public List<Mercador> listarPorDestaque(){
-		return new ArrayList<Mercador>(mercadorRepo.listarPorDestaque());
+	@RequestMapping(value = "/listaMercadorResumidoComParametroSecao", method = RequestMethod.GET)
+	public List<MercadorResumido> buscarProdutoPorSecaoComParametro(String secmer){
+		return new ArrayList<MercadorResumido>(mercadorRepo.listarPorDestaqueESecao(secmer));
 	}
-
+	
+	@RequestMapping(method = RequestMethod.GET)
+	public List<MercadorResumido> buscarProdutoPorSecao(){
+		return new ArrayList<MercadorResumido>(mercadorRepo.listarPorDestaque());
+	}
+	
+	
 }
 
